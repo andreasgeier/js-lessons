@@ -8,7 +8,7 @@
 - [Übung 04](1-js-basics/day01-lesson04.html): .length
 - [Übung 05](1-js-basics/day01-lesson05.html): typeof
 - [Übung 06](1-js-basics/day01-lesson06.html): operators
-- [Übung 07](1-js-basics/day02-lesson07.html): prompt
+- [Übung 07](1-js-basics/day02-lesson07.html): prompt()
 - [Übung 08](1-js-basics/day02-lesson08.html): Brutto kalkulieren
 - [Übung 09](1-js-basics/day02-lesson09.html): Bezeichner Konvention 1
 - [Übung 10](1-js-basics/day02-lesson10.html): Bezeichner Konvention 2
