@@ -14,4 +14,5 @@
 - [Übung 10](1-js-basics/day02-lesson10.html): Bezeichner Konvention 2
 - [Übung 11](1-js-basics/day02-lesson11.html): Template String Substitution
 - [Übung 12](1-js-basics/day02-lesson12.html): Strings verketten
+- [Übung 13](1-js-basics/day02-lesson13.html): Steuerzeichen maskieren
 
