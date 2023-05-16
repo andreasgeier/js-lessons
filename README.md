@@ -12,4 +12,5 @@
 - [Übung 08](1-js-basics/day02-lesson08.html): Brutto kalkulieren
 - [Übung 09](1-js-basics/day02-lesson09.html): Bezeichner Konvention 1
 - [Übung 10](1-js-basics/day02-lesson10.html): Bezeichner Konvention 2
+- [Übung 11](1-js-basics/day02-lesson11.html): Template String Substitution
 
