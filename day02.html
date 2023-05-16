@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // deprecated
+        var tasse = 'Tee'
+        console.log(tasse)
+
+        // variable declaration
+        let glasInhalt = 'Wasser'
+        glasInhalt = 'O-Saft'
+        console.log(glasInhalt)
+
+        // constant declaration
+        // use SCREAMING_SNAKE_CASE for constants
+        let netto
+        const MWSTR = .19
+        const BRUTTO = netto * (1 + MWSTR)
+        console.log(MWSTR)
+
+        // use prompt to define the value of a variable
+        let getraenk = prompt('Was möchtest du trinken?')
+        console.log('Du möchtest ' + getraenk)
+
+        // assignment operators
+        let x = 10
+        let y = 5
+        x += y // same as x = x + y -> 15
+        x -= y // same as x = x - y -> 5
+        x *= y // same as x = x * Y -> 50
+        x /= y // same as x = x / y -> 2
+        x %= y // same as x = x % y -> 0
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
