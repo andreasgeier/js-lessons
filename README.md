@@ -19,4 +19,5 @@
 - [Übung 15](1-js-basics/day03-lesson15.html): Rechnung Kraftstoffverbrauch
 - [Übung 16](1-js-basics/day03-lesson16.html): Zeitrechner
 - [Übung 17](1-js-basics/day03-lesson17.html): Lotto (1 - 49)
+- [Übung 18](1-js-basics/day03-lesson18.html): Rechnung Kraftstoffverbrauch (gerundet)
 
