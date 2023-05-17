@@ -17,4 +17,5 @@
 - [Übung 13](1-js-basics/day02-lesson13.html): Steuerzeichen maskieren
 - [Übung 14](1-js-basics/day02-lesson14.html): Ausdrücke bestimmen
 - [Übung 15](1-js-basics/day03-lesson15.html): Rechnung Kraftstoffverbrauch
+- [Übung 16](1-js-basics/day03-lesson16.html): Zeitrechner
 
