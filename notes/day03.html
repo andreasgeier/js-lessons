@@ -69,6 +69,32 @@
         let diceNumber = Math.ceil(Math.random() * 6)
         console.log(diceNumber)
 
+        // Datentyp Boolean
+        console.log('Boolean: true or false _____')
+
+        // Gewähre Rabatt bei 3 oder mehr Produkten
+        let shopItems = 5
+        console.log(`Rabatt gewährt: ${shopItems >= 3}`)
+        shopItems = 2
+        console.log(`Rabatt gewährt: ${shopItems >= 3}`)
+        
+        console.log(typeof (3 > 7)) // boolean
+        console.log(typeof true) // boolean
+
+        // Is not a number?
+        console.log(isNaN(NaN)) // true
+        console.log(isNaN(-43)) // false
+        console.log(isNaN('2')) // false, da implizite Kovertierung in Typ number
+        console.log(isNaN('drei')) // true
+
+        // Lexikographischen Vergleich bei Strings
+        // 0123 ... ABC ... abc
+        console.log('3' < '4') // true
+        console.log('300' < '4') // true, da Zeichen für Zeichen verglichen wird und das erste bereits kleiner ist
+        console.log('5' < 'a') // true
+        console.log('a' < 'A') // false
+        console.log(3 < "Auto") // false, immer wenn Impl. Konv. und ein Operand NaN ist
+
     </script>
 </head>
 <body>
