@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Implizite Typkonvertierung
+        console.log('Implizite Typkonvertierung _____')
+        // '5' * '4' -> konvertiert zu number und return ist 20
+        console.log('5' * '4')
+        // 5 + '4' -> konvertiert nicht, da + operator, ergibt string '54'
+        console.log(5 + '4')
+
+        let a = 'abc' // datentyp string
+        console.log(typeof a + ': ' + a)
+        let b = '12' // datentyp string
+        b -= 9 // implizite Konvertierung
+        console.log(b)
+
+        // Explizite Typkonvertierung
+        console.log('Explizite Typkonvertierung _____')
+        let zahl1 = '2'
+        let zahl2 = '5'
+        let zahl3 = zahl1 + zahl2
+        console.log(typeof zahl3 + ': ' + zahl3) // 25 -> strings addieren erzeugt Verkettung, keine Konvertierung
+        zahl3 = Number(zahl1) + Number(zahl2)
+        console.log(typeof zahl3 + ': ' + zahl3) // 7 -> zahl 1 und zahl2 wurden mit Number konvertiert
+        console.log(`${typeof zahl3}: ${zahl3}`) // 7 -> Schreibweise mit Template string
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
