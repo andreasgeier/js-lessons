@@ -27,9 +27,10 @@
         let zahl2 = '5'
         let zahl3 = zahl1 + zahl2
         console.log(typeof zahl3 + ': ' + zahl3) // 25 -> strings addieren erzeugt Verkettung, keine Konvertierung
+
         zahl3 = Number(zahl1) + Number(zahl2)
         console.log(typeof zahl3 + ': ' + zahl3) // 7 -> zahl 1 und zahl2 wurden mit Number konvertiert
-        console.log(`${typeof zahl3}: ${zahl3}`) // 7 -> Schreibweise mit Template string
+        console.log(`${typeof zahl3}: ${zahl3}`) // 7 -> identisch zu vorheriger Zeile, Schreibweise mit Template string
 
     </script>
 </head>
