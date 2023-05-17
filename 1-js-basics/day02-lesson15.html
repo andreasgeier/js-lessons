@@ -8,15 +8,23 @@
     <script>
         'use strict'
 
+        // Erster Teil: Verbrauch
         let strecke = Number(prompt('Wie viele Kilometer bist du gefahren?'))
         let benzinMenge = Number(prompt('Wie viele Liter Benzin hast du verbraucht?'))
         let benzinVerbrauch
 
         benzinVerbrauch = benzinMenge / strecke * 100
-        39300
         console.log(benzinVerbrauch)
-        alert(`Dein Verbrauch beträgt ${benzinVerbrauch} Liter pro 100 Kilometer.`)
-        
+
+        // Zweiter Teil: Reichweite
+        let tankVolumen = Number(prompt('Wie viele Liter fasst dein Tank?'))
+        let reichweite
+
+        reichweite = tankVolumen * strecke / benzinMenge
+        console.log(reichweite)
+
+        alert(`Dein Verbrauch beträgt ${benzinVerbrauch} Liter pro 100 Kilometer.\nBei deinem Tankvolumen von ${tankVolumen} Litern kannst du damit ${reichweite} Kilometer weit fahren.`)
+
     </script>
 </head>
 <body>
