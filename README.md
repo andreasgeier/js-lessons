@@ -18,4 +18,5 @@
 - [Übung 14](1-js-basics/day02-lesson14.html): Ausdrücke bestimmen
 - [Übung 15](1-js-basics/day03-lesson15.html): Rechnung Kraftstoffverbrauch
 - [Übung 16](1-js-basics/day03-lesson16.html): Zeitrechner
+- [Übung 17](1-js-basics/day03-lesson17.html): Lotto (1 - 49)
 
