@@ -20,4 +20,7 @@
 - [Übung 16](1-js-basics/day03-lesson16.html): Zeitrechner
 - [Übung 17](1-js-basics/day03-lesson17.html): Lotto (1 - 49)
 - [Übung 18](1-js-basics/day03-lesson18.html): Rechnung Kraftstoffverbrauch (gerundet)
+- [Übung 19](1-js-basics/day05-lesson19.html): if
+- [Übung 20](1-js-basics/day05-lesson20.html): if & else
+- [Übung 21](1-js-basics/day05-lesson21.html): Gewichtskontrolle
 

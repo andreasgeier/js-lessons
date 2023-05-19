@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Heute schreiben Sie ein kleines Motivations-Tool für Menschen, die ein 
+            bisschen abnehmen möchten.
+            Fragen Sie den Anwender zuerst nach seinem gestrigen und dann nach 
+            seinem heutigen Gewicht und speichern Sie die Antworten jeweils in einer 
+            Variable.
+            Für den Fall, dass das heutige Gewicht geringer ist als das gestrige, 
+            berechnen Sie die Verringerung in Prozent und geben eine begeisterte 
+            Gratulation unter Angabe der Gewichtsreduktion in ganzen Prozent aus. 
+            Vielleicht fällt Ihnen ja auch eine kleine Belohnung für den Anwender 
+            ein…
+            Für den Fall, dass das heutige Gewicht höher ist als das gestrige, 
+            rechnen Sie auch diese Veränderung in Prozent um und geben unter Angabe 
+            der Gewichtszulage in Prozent eine mahnende Nachricht aus. Vielleicht 
+            mit der Aufforderung zu einer Aktivität?
+            Für den Fall, dass das Gewicht identisch ist, feuern Sie den Anwender 
+            an, sich ein bisschen mehr zu bemühen und dranzubleiben.
+        */
+
+        let weightYesterday = Number(prompt('Wieviel hast du gestern gewogen?'))
+        let weightToday = Number(prompt('Wieviel wiegst du heute?'))
+        let weightDifference = weightToday - weightYesterday
+        let percentageDifference =  Math.round(Math.abs(weightDifference * 100 / weightYesterday))
+
+        console.log(`Gewichtsdifferenz: ${weightDifference}kg`)
+        console.log(`Prozentuale Änderung: ${percentageDifference}%`)
+        
+
+        // Fall: Gewichtsabnahme
+        if (weightDifference < 0) {
+            alert(`Super! Du hast ${percentageDifference}% Gewicht verloren. Jetzt schnell 'ne Pizza!`)
+        }
+
+        // Fall: Gewichtszunahme
+        if (weightDifference > 0) {
+            alert(`Schade! Du hast ${percentageDifference}% Gewicht zugenommen. Lieber mal Sprudel statt Cola!`)
+        }
+
+        // Fall: Keine Veränderung
+        if (weightDifference === 0) {
+            alert(`Dein Gewicht ist unverändert. Bleib dran, da geht noch was!`)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

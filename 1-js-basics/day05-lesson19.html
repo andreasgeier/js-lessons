@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Programmieren Sie nun Stück für Stück ein kleines Quiz, in dem ein 
+            Spieler Fragen zu JS beantworten muss und damit gegen Fehler und 
+            schlechten Code — also die dunkle Seite von JS — antritt. Möge der 
+            Source mit Ihnen sein.
+
+            1. Fragen Sie den Spieler nach seinem Namen, speichern diesen in eine 
+            Variable und begrüßen ihn mittels einer Alert-Box.
+        */
+
+        let username = prompt('Wie ist dein Name?')
+        console.log(username)
+        alert(`Hi ${username}!`)
+
+        /*
+            2. Stellen Sie dem Spieler die Frage, ob er sich fit genug fühlt, um 
+            gegen das dunkle JavaScript anzutreten. Es ist sinnvoll, bei der Frage 
+            die Antwortmöglichkeiten anzugeben. Die Antwort speichern Sie in einer 
+            neuen Variable und erstellen als Nächstes eine if-Verzweigung. Der 
+            Rumpf des if soll nur ausgewertet werden, wenn der Spieler bestätigt, 
+            dass er sich stark genug fühlt, das Spiel zu beginnen. In den Rumpf 
+            schreiben wir ein alert, das den Spielstart bestätigt und den Spieler 
+            anfeuert.
+            Für den Fall, dass der Spieler zu feige ist und einen mangelnden 
+            Fitness-Grad angegeben hat, schreiben Sie eine weitere if-Verzweigung, 
+            die den Fall abfängt und den Spieler verabschiedet. 
+        */
+
+        let fitnessLevel = prompt(`Wie fühlst du dich, ${username}? Antworte mit einer Zahl zwischen 1 (super mies) und 10 (top fit).`)
+        console.log(fitnessLevel)
+        if (fitnessLevel >= 6) {
+            console.log('Spiel kann starten')
+            alert('Klingt super. Lass uns loslegen!')
+
+            /*
+                3. Nun kann es losgehen. Stellen Sie den Spieler vor seine erste 
+                Aufgabe. Deklarieren Sie nach dem alert eine neue Variable, in der Sie 
+                die Antwort des Spielers zu folgender Frage speichern:
+                »Which Operator has the higher priority: * or + ?«
+                Um auf die Antwort reagieren zu können, schreiben Sie eine weitere 
+                if-Verzweigung, deren Rumpf nur ausgewertet wird, wenn die Antwort stimmt.
+            */
+        
+            let question = prompt('Welcher JavaScript-Operator is höher priorisiert: "*" oder "+"?')
+            console.log(question)
+            if (question === '*') {
+                console.log('Richtige Antwort')
+                alert(`Richtig! ${username}, das war nicht schlecht!`)
+            }
+    
+            /*
+                4. Fügen Sie ein weiteres if für die Variante ein, in der der Spieler 
+                eine falsche Antwort gibt.
+            */
+
+            if (question !== '*') {
+                console.log('Falsche Antwort')
+                alert(`Sorry, ${username}. Das war die falsche Antwort!`)
+            }
+        }
+
+        if (fitnessLevel <6 ) {
+            console.log('Spielabbruch. Spieler mies drauf.')
+            alert('Tut mir leid für dich. Nimm dir \'ne Auszeit!')
+        } 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

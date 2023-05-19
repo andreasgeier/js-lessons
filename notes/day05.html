@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Relationale Operatoren und Datentyp Boolean
+        let a = 4
+        let b = 5
+        console.log(a > b) // false
+        console.log(a < b) // true
+        console.log(a <= b) // true
+        console.log(typeof (a > b)) // boolean
+
+        console.log(`Bedingung '5' == 5 ist ` + ('5' == 5)) // true
+        console.log(`Bedingung '5' === 5 ist ` + ('5' === 5)) // false
+
+        // if & else
+        const SOLUTION = 42
+        let answer = Number(prompt('What\'s the result of 6 * 7?'))
+        if (answer === SOLUTION) {
+            console.log('Correct. You are a genius!')
+        } else {
+            console.log('Ups. That was wrong.')
+        }
+        
+        // Kurze Schreibweise
+        if (5 === 5) console.log('Korrekt')
+        if (5 !== 5) ? console.log('Korrekt') : console.log('Falsch')
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

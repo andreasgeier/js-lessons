@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        // Wie Übung 19, aber mit if - else
+
+        // Name
+        let username = prompt('Wie ist dein Name?')
+        console.log(username)
+        alert(`Hi ${username}!`)
+
+        // Stimmung
+        let fitnessLevel = prompt(`Wie fühlst du dich, ${username}? Antworte mit einer Zahl zwischen 1 (super mies) und 10 (top fit).`)
+        console.log(fitnessLevel)
+        if (fitnessLevel >= 6) {
+            console.log('Spiel kann starten')
+            alert('Klingt super. Lass uns loslegen!')
+
+            // Frage
+            let question = prompt('Welcher JavaScript-Operator is höher priorisiert: "*" oder "+"?')
+            console.log(question)
+            if (question === '*') {
+                console.log('Richtige Antwort')
+                alert(`Richtig! ${username}, das war nicht schlecht!`)
+            } else {
+                console.log('Falsche Antwort')
+                alert(`Sorry, ${username}. Das war die falsche Antwort!`)
+            }
+        } else {
+            console.log('Spielabbruch. Spieler mies drauf.')
+            alert('Tut mir leid für dich. Nimm dir \'ne Auszeit!')
+        } 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
