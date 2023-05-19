@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'Use strict'
+        /*
+            Vielleicht gehören Sie zu den Menschen, die »die Sache mit dem 
+            Schaltjahr« spannend finden. Und falls Sie es nicht spannend finden, 
+            schreiben Sie einfach trotzdem ein Programm, das berechnet, ob es sich 
+            bei einem Jahr um ein Schaltjahr handelt.
+            Fragen Sie den Anwender nach dem gewünschten Jahr und speichern Sie 
+            die Eingabe in einer Variable.
+            Falls das betreffende Jahr ein Schaltjahr ist, soll die Konsole z.B. 
+            den Satz »0000 ist ein Schaltjahr!« ausgeben; ansonsten »0000 ist KEIN 
+            Schaltjahr« — mit dem eingegeben Jahr statt 0000.
+            Ein Jahr ist ein Schaltjahr, wenn das betreffende Jahr
+                - ganzzahlig durch 400 teilbar ist.
+                - nicht ganzzahlig durch 100, aber ganzzahlig durch 4 teilbar ist.
+        */
+
+        let jahr = Number(prompt('Eingabe der Jahreszahl zur Schaltjahr-Prüfung'))
+
+        if (jahr % 400 === 0 || (jahr % 100 !== 0 && jahr % 4 === 0)) {
+            console.log(`Das Jahr ${jahr} ist ein Schaltjahr.`)
+        } else {
+            console.log(`Das Jahr ${jahr} ist KEIN Schaltjahr.`)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
