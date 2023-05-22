@@ -24,4 +24,5 @@
 - [Übung 20](1-js-basics/day05-lesson20.html): if & else
 - [Übung 21](1-js-basics/day05-lesson21.html): Gewichtskontrolle
 - [Übung 22](1-js-basics/day05-lesson22.html): Schaltjahr
+- [Übung 23](1-js-basics/day06-lesson23.html): Quiz mit 3 Fragen
 
