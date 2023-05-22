@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        /*
+            Kapitel 11, Denken wie ein Programmierer
+            Gegeben sei eine Zahl x. Wenn diese Zahl x eine gerade Zahl ist, soll sie mit 
+            2 multipliziert werden. Wenn die Zahl ungerade ist, soll sie mit sich selbst 
+            multipliziert werden. Das Ergebnis dieser Berechnung soll mittels console.log() 
+            ausgegeben werden.
+        */
+
+        // Pseudo Code:
+        // wenn x gerade zahl dann x * 2
+        // wenn x ungerade zahl dann X * X
+        // ergebnis ausgeben
+
+        // Code:
+        let x = 3
+        if (x % 2 === 0) {
+            x *= 2
+        } else {
+            x **= x
+        }
+        console.log(x)
+
+        // Kapitel 12, Logische Operatoren
+        
+        // Pseudocode:
+        // wenn mindestens 3 Artikel gekauft werden, gebe 5 % Rabatt
+        // wenn ein Artikel nicht älter als 30 Tage ist, gebe 5 % Rabatt
+        // der Rabatt darf insgesamt nicht mehr als 5 % betragen
+
+        let discountPercentage = 0
+        let productAgeInDays = 31
+        let quantityOfCartItem = 5
+
+        if (productAgeInDays <= 30 || quantityOfCartItem >= 3) discountPercentage = 5
+        
+        console.log(`Aktueller Rabatt: ${discountPercentage}%`)
+
+        // Pseudocode:
+        // if shoppingCartValue >= 100 and shoppingHistorie = 0
+        // grant discount = 7
+
+        let shoppingCartValue = 120
+        let shoppingHistorie = 0
+        let shoppingDiscount = 0
+
+        if (shoppingCartValue >= 100 && shoppingHistorie === 0) shoppingDiscount = 7
+
+        console.log(`Aktueller Rabatt: ${shoppingDiscount}%`)
+
+        // Nicht-Operator
+
+        let a = true
+        console.log(!a) // false
+
+        let numberInput = 7
+        if (isNaN(numberInput)) console.log('Eingabe ist eine Zahl')
+        if (!isNaN(numberInput)) console.log('Eingabe ist keine Zahl')
+
+        // truthy, falsy
+        /*
+            https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+            
+            In JavaScript, a truthy value is a value that is considered true when encountered 
+            in a Boolean context. All values are truthy unless they are defined as falsy. That 
+            is, all values are truthy except:
+            false, 0, -0, 0n, "", null, undefined, NaN
+
+            Truthy examples:
+            if (true)
+            if ({})
+            if ([])
+            if (42)
+            if ("0")
+            if ("false")
+            if (new Date())
+            if (-42)
+            if (12n)
+            if (3.14)
+            if (-3.14)
+            if (Infinity)
+            if (-Infinity)
+        */
+
+        // Logische Operatoren mit truthy und falsy
+        /*
+            https://riptutorial.com/javascript/example/828/logic-operators-with-non-boolean-values--boolean-coercion-
+        
+            Logical OR (||), reading left to right, will evaluate to the first truthy value. 
+            If no truthy value is found, the last value is returned.
+
+            var a = 'hello' || '';             // a = 'hello'
+            var b = '' || [];                  // b = []
+            var c = '' || undefined;           // c = undefined
+            var d = 1 || 5;                    // d = 1
+            var e = 0 || {};                   // e = {}
+            var f = 0 || '' || 5;              // f = 5
+            var g = '' || 'yay' || 'boo';      // g = 'yay'
+
+            Logical AND (&&), reading left to right, will evaluate to the first falsy value. 
+            If no falsey value is found, the last value is returned.
+
+            var a = 'hello' && '';                  // a = ''
+            var b = '' && [];                       // b = ''
+            var c = undefined && 0;                 // c = undefined
+            var d = 1 && 5;                         // d = 5
+            var e = 0 && {};                        // e = 0
+            var f = 'hi' && [] && 'done';           // f = 'done'
+            var g = 'bye' && undefined && 'adios';  // g = undefined
+        */
+
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
