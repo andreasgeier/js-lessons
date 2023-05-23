@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Folgender Datensatz liegt Ihnen vor:
+            let name = 'Heribert  Gold '
+​
+            1. Zerlegen Sie den Namen in Vor- und Nachnamen.
+            2. Entfernen Sie die überflüssigen Leerzeichen.
+        */
+
+        let name = 'Heribert  Gold ' 
+        let vorname = name.substring(0, name.indexOf(' ')).trim()
+        let nachname = name.substring(name.indexOf(' ')).trim()
+
+        console.log(vorname)
+        console.log(nachname)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
