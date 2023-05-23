@@ -30,4 +30,5 @@
 - [Übung 26](1-js-basics/day07-lesson26.html): indexOf(), substring()
 - [Übung 27](1-js-basics/day07-lesson27.html): Vorname, Nachname trennen
 - [Übung 28](1-js-basics/day07-lesson28.html): Namen zerlegen und kürzen
+- [Übung 29](1-js-basics/day07-lesson29.html): toLowerCase()
 
