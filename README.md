@@ -31,4 +31,6 @@
 - [Übung 27](1-js-basics/day07-lesson27.html): Vorname, Nachname trennen
 - [Übung 28](1-js-basics/day07-lesson28.html): Namen zerlegen und kürzen
 - [Übung 29](1-js-basics/day07-lesson29.html): toLowerCase()
+- [Übung 30](1-js-basics/day07-lesson30.html): Nadel im Heuhaufen
+- [Übung 31](1-js-basics/day07-lesson31.html): Artikelnummern ergänzen
 
