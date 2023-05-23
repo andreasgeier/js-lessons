@@ -27,4 +27,5 @@
 - [Übung 23](1-js-basics/day06-lesson23.html): Quiz mit 3 Fragen
 - [Übung 24](1-js-basics/day06-lesson24.html): Eingaben prüfen
 - [Übung 25](1-js-basics/day06-lesson25.html): Schaltjahr-Rechner
+- [Übung 26](1-js-basics/day07-lesson26.html): indexOf(), substring()
 
