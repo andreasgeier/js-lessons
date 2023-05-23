@@ -8,10 +8,43 @@
     <script>
         'use strict'
 
-        // indexOf
+        // indexOf()
         let hero = 'Peter Parker'
-        console.log(hero.indexOf(' '))
-        
+        console.log(hero.indexOf(' ')) // 5
+
+        let hero2 = 'Ironman'
+        if (hero2.indexOf(' ') < 0) { // -1 als Rückgabewert da kein Leerzeichen gefunden
+            console.log(hero2 + ' enthält kein Leerzeichen')
+        } else {
+            console.log(hero2.indexOf(' '))
+        }
+
+        let heroIdentity = 'Peter Parker ist Spiderman!'
+        console.log(heroIdentity.lastIndexOf(' ')) // 16, sucht von hinten
+
+        // substring()
+        let villain = 'Doctor Doom'
+        let spacePosition = villain.indexOf(' ')
+        let firstNameVillain = villain.substring(0, spacePosition)
+        console.log(firstNameVillain)
+
+        let lastNameVillain = villain.substring(spacePosition + 1)
+        console.log(lastNameVillain)
+
+        // trim()
+        let messedUpEntry = '      John Wick     '
+        console.log(messedUpEntry.trim()) // entfernt Leerzeichen am Start und Ende
+
+        // charAt()
+        let villainFirstName = 'Lex'
+        let villainLastName = 'Luthor'
+        console.log(`${villainLastName}, ${villainFirstName.charAt(0)}.`) // Luthor, L.
+
+        // toLowerCase(), toUpperCase()
+        let allTimeHero = 'sUperMAn'
+        console.log(allTimeHero.toLowerCase()) // superman
+        console.log(allTimeHero.toUpperCase()) // SUPERMAN
+
     </script>
 </head>
 <body>
