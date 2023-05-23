@@ -80,7 +80,27 @@
         let maskedCardNumber = last4Digits.padStart(cardNumber.length, '*')
         console.log(maskedCardNumber)
 
-        
+        // Functions
+
+        // Deklaration
+        function myFunction() { 
+            console.log('Ich bin eine "Function"') 
+        }
+        let myArrowFunction = () => { console.log('Ich bin eine "Arrow Function"') }
+
+        // Aufruf
+        myFunction()
+        myArrowFunction();
+
+        // Anonyme Funktion, direkt ausgeführt, da () angehängt
+        (function() {
+            console.log('Ich lege einfach los... :\)');
+        })();
+
+        // Anonyme Funktion als Argument innerhalb anderer Funktion
+        setTimeout(function() {
+            console.log('Warte 2 Sekunden')
+        }, 2000);
 
     </script>
 </head>
