@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Name
+        let username = prompt('Wie ist dein Name?')
+        alert(`Hi ${username}!`)
+
+        // Fitness-Level
+        let fitnessLevel = prompt(`Wie fühlst du dich, ${username}? Antworte mit einer Zahl zwischen 1 (super mies) und 10 (top fit).`)
+        if (fitnessLevel > 5) {
+            alert('Klingt super. Lass uns loslegen!')
+
+            // Frage 1
+            let answer1 = prompt('Welcher JavaScript-Operator is höher priorisiert: "*" oder "+"?')
+            if (answer1 === '*') {
+                alert(`Richtig! ${username}, du hast es drauf!`)
+            } else {
+                alert(`Sorry, ${username}. Das war die falsche Antwort!`)
+            }
+
+            // Frage 2
+            /*
+                Der Code deckt schon drei verschiedene Lösungsmöglichkeiten ab. Aber was ist, wenn jemand 
+                statt wenn Wenn oder WENN schreibt?
+                Das Thema Groß- und Kleinschreibung wird Ihnen bei Benutzereingaben öfter begegnen. Für 
+                das Spiel würde es zum Beispiel helfen, wenn der Spieler die Eingabe immer komplett 
+                kleinschreibt. Sicher ist der Spieler verwirrt, wenn das Spiel seine Antwort Wenn als falsch 
+                quittiert.
+                Optimieren Sie die betreffende Stelle im Spiel, indem Sie die Benutzereingabe in 
+                Kleinbuchstaben wandeln — vor Prüfung der if-Bedingung.
+            */
+            let answer2 = prompt('What\'s the German word for if?').toLowerCase() // Lösung toLowerCase()
+            if (answer2 === 'wenn' || answer2 === 'falls') {
+                alert(`Richtig! ${username}, du hast es drauf!`)
+            } else {
+                alert(`Sorry, ${username}. Das war die falsche Antwort!`)
+            }
+
+            // Frage 3
+            let answer3 = prompt('Gebe ein Wort ein das mindestens 8 und höchstens 15 Zeichen lang ist...')
+            if (answer3.length >= 8 && answer3.length <= 15) {
+                alert(`Richtig! ${username}, du hast es drauf!`)
+            } else {
+                alert(`Sorry, ${username}. Das war die falsche Antwort!`)
+            }
+
+
+        } else {
+            alert('Tut mir leid für dich. Nimm dir \'ne Auszeit!')
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
