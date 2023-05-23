@@ -45,6 +45,43 @@
         console.log(allTimeHero.toLowerCase()) // superman
         console.log(allTimeHero.toUpperCase()) // SUPERMAN
 
+        // replace()
+        let secretIdentity = 'Peter Parker läuft durch den Regen, dann geht Peter Parker nach Hause.'
+        console.log(secretIdentity.replace('Peter Parker', 'Spiderman')) // ersetzt nur erste Fundestelle
+
+        // replace mit regex (regular expression)
+        let productDescription = 'Bester Kaffee aus Chile. Kaffee, der umwerfend schmeckt. Unser Kaffee ist nachhaltig.'
+        let productDescriptionOld = /Kaffee/g
+        let productDescriptionNew = 'Tee'
+        console.log(productDescription.replace(productDescriptionOld, productDescriptionNew)) // Beispiel mit Variablen
+        console.log(productDescription.replace(/Chile/g, 'Bolivien')) // direkter Austausch
+
+        // replaceAll()
+        // wie vorheriges Beispiel, aber ohne regex
+        console.log(productDescription.replaceAll('Kaffee', 'Zucker'))
+
+        // includes()
+        let shopItem = 'Kaffee Tasse'
+        let searchTerm = 'Tasse'
+        console.log(shopItem.includes(searchTerm)) // true
+        console.log(shopItem.includes('tasse')) // false, weil case-sensitive
+        console.log(shopItem.toLowerCase().includes('tasse')) // true
+
+        // startsWith()
+        let shopItemSales = '[Sale] Kaffeetasse'
+        let searchTermSale = '[Sale]'
+        console.log(shopItemSales.startsWith(searchTermSale)) // true
+        console.log(shopItemSales.toLowerCase().startsWith('[sale]')) // true
+        console.log(shopItemSales.startsWith('Sale', 1)) // true, startet auf Position 1
+
+        // slice() & padStart()
+        let cardNumber = '1234567890123456'
+        let last4Digits = cardNumber.slice(-4) // letzte vier Zeichen
+        let maskedCardNumber = last4Digits.padStart(cardNumber.length, '*')
+        console.log(maskedCardNumber)
+
+        
+
     </script>
 </head>
 <body>
