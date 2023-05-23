@@ -90,7 +90,11 @@
 
         // Aufruf
         myFunction()
-        myArrowFunction();
+        myArrowFunction()
+
+        // Function als Konstante
+        const CALCULATOR_MULTIPLY = (a, b) => {console.log(a * b)} 
+        CALCULATOR_MULTIPLY(3, 5);
 
         // Anonyme Funktion, direkt ausgeführt, da () angehängt
         (function() {
@@ -99,7 +103,7 @@
 
         // Anonyme Funktion als Argument innerhalb anderer Funktion
         setTimeout(function() {
-            console.log('Warte 2 Sekunden')
+            console.log('Ich habe 2 Sekunden gewartet')
         }, 2000);
 
     </script>
