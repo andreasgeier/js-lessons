@@ -19,9 +19,10 @@
         */
 
         let item1 = '123'
-        let item2 = '0123'
-        let item3 = '1'
-        let item4 = '12'
+        let item2 = '0456'
+        let item3 = '7'
+        let item4 = '89'
+        let item5 = '00010'
         /*
             if (item1.startsWith('0')) {
                 console.log('Do nothing')
@@ -30,15 +31,24 @@
                 console.log('Leading zero added')
             }
         */
-        item1.startsWith('0') ? '' : item1 = item1.padStart(item1.length + 1, '0') // 0123
-        item2.startsWith('0') ? '' : item2 = item2.padStart(item2.length + 1, '0') // 0123, unchanged
-        item3.startsWith('0') ? '' : item3 = item3.padStart(item3.length + 1, '0') // 01
-        item4.startsWith('0') ? '' : item4 = item4.padStart(item4.length + 1, '0') // 012
+        item1.startsWith('0') ? undefined : item1 = item1.padStart(item1.length + 1, '0') // 0123
+        item2.startsWith('0') ? undefined : item2 = item2.padStart(item2.length + 1, '0') // 0123, unchanged
+        item3.startsWith('0') ? undefined : item3 = item3.padStart(item3.length + 1, '0') // 01
+        item4.startsWith('0') ? undefined : item4 = item4.padStart(item4.length + 1, '0') // 012
+        item5.startsWith('0') ? undefined : item5 = item5.padStart(item5.length + 1, '0') // 00010, unchanged
 
         console.log(item1)
         console.log(item2)
         console.log(item3)
         console.log(item4)
+        console.log(item5)
+
+        /*
+            Bessere Lösung:
+            let itemNumber = '123'
+            let correctedItemNumber = (itemNumber.charAt(0) === '0' ? '' : '0') + itemNumber
+            console.log(correctedItemNumber)
+        */
 
     </script>
 </head>
