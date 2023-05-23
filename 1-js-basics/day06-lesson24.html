@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /* 
+            Nehmen Sie Angaben zu Vorname, Nachname, Geschlecht und Alter eines Anwenders 
+            entgegen und speichern Sie diese in Variablen.
+        */
+        let firstName = prompt('Vorname?')
+        let lastName = prompt('Nachname?')
+        let gender = prompt('Geschlecht? m/f')
+        let age = Number(prompt('Alter?'))
+        let error = ''
+
+        /*
+            Diese Eingaben sollen Sie nun folgendermaßen validieren:
+            - Vorname und Nachname müssen zwischen 2 und 100 Zeichen lang sein.
+            - Die Eingabe für das Geschlecht muss m (male) oder ein f (female) sein.
+            - Das Alter muss eine Zahl unter 150 sein.
+        */
+        if (firstName.length >= 2 && firstName.length <= 100) {
+            console.log(`Vorname (${firstName}) ist korrekt eingegeben.`)
+        } else {
+            error += ' Vorname'
+        }
+        if (lastName.length >= 2 && lastName.length <= 100) {
+            console.log(`Nachname (${lastName}) ist korrekt eingegeben.`)
+        } else {
+            error += ' Nachname'
+        }
+        if (gender === 'f' || gender === 'm') {
+            console.log(`Geschlecht (${gender}) ist korrekt eingegeben.`)
+        } else {
+            error += ' Geschlecht'
+        }
+        if (age < 150) {
+            console.log(`Alter (${age} Jahre) ist korrekt eingegeben.`)
+        } else {
+            error += ' Alter'
+        }
+
+        if (error === '') {
+            console.log('Alle Eingaben sind korrekt.')
+        } else {
+            console.log('Folgende Eingaben sind ungültig:' + error)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -25,4 +25,6 @@
 - [Übung 21](1-js-basics/day05-lesson21.html): Gewichtskontrolle
 - [Übung 22](1-js-basics/day05-lesson22.html): Schaltjahr
 - [Übung 23](1-js-basics/day06-lesson23.html): Quiz mit 3 Fragen
+- [Übung 24](1-js-basics/day06-lesson24.html): Eingaben prüfen
+- [Übung 25](1-js-basics/day06-lesson25.html): Schaltjahr-Rechner
 
