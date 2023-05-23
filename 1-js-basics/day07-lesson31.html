@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            NerdWorld hat vor einiger Zeit sein Artikelnummer-Konzept geändert. Die neuen 
+            Artikelnummern beginnen stets mit einer 0 — z.B. 0123. Leider gibt es bei den 
+            alten Nummern viele, die nicht über eine führenden 0 verfügen. Sie können aber 
+            auch nicht einfach pauschal eine 0 ergänzen, da manche der alten Nummern bereits 
+            mit einer 0 beginnen. In dem Fall soll keine weitere 0 vorangestellt werden. 
+            Ergänzen Sie das folgende Programmfragment, so dass es für jede Belegung der 
+            Variable itemNumber (Artikelnummer) die richtige Nummer im neuen Konzept ausgibt. 
+            Verwenden Sie dazu den ternären Operator!
+        */
+
+        let item1 = '123'
+        let item2 = '0123'
+        let item3 = '1'
+        let item4 = '12'
+        /*
+            if (item1.startsWith('0')) {
+                console.log('Do nothing')
+            } else {
+                item1 = item1.padStart(item1.length + 1, '0')
+                console.log('Leading zero added')
+            }
+        */
+        item1.startsWith('0') ? '' : item1 = item1.padStart(item1.length + 1, '0') // 0123
+        item2.startsWith('0') ? '' : item2 = item2.padStart(item2.length + 1, '0') // 0123, unchanged
+        item3.startsWith('0') ? '' : item3 = item3.padStart(item3.length + 1, '0') // 01
+        item4.startsWith('0') ? '' : item4 = item4.padStart(item4.length + 1, '0') // 012
+
+        console.log(item1)
+        console.log(item2)
+        console.log(item3)
+        console.log(item4)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
