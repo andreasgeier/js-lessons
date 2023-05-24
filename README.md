@@ -40,4 +40,5 @@
 - [Übung 37](1-js-basics/day08-lesson37.html): String transformieren mit Function
 - [Übung 38](1-js-basics/day08-lesson38.html): Kraftstoffverbrauch mit Function
 - [Übung 39](1-js-basics/day08-lesson39.html): Link formatieren
+- [Übung 40](1-js-basics/day08-lesson40.html): Celsius zu Fahrenheit
 
