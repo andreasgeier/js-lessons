@@ -10,28 +10,38 @@
 
         // BMI Rechner
         // Formel: Körpergewicht geteilt durch Körpergröße in Metern zum Quadrat
+        console.log('┌─────────────┐\n' +
+                    '│ BMI-Rechner │\n' +
+                    '└─────────────┘'
+                    )
 
-        // Values
-        let heightInMeter = '1.7'
-        let weightInKilogramm = '70'
+        // Input values
+        let height = 1.7
+        let weight = 76
 
         // Calculate BMI with a function
-        const BMI_CALCULATOR = (height, weight) => {
+        const BMI_CALCULATOR = () => { 
             let bmi = (weight / Math.pow(height, 2)).toFixed(1)
             return bmi
         }
 
         // Declare variable with return value of calculator
-        let bmi = BMI_CALCULATOR(heightInMeter, weightInKilogramm)
+        let bmi = BMI_CALCULATOR()
 
         // Define result output
-        let message = bmi => {
+        let message = () => {
             console.log('BMI: ' + bmi)
             if (bmi <= 20) console.log('Eat more!')
             if (bmi >= 25) console.log('Eat less and do more sports!')
             if (bmi > 20 && bmi < 25) console.log('You\'re perfect!')
         }
-        message(bmi)
+        message()
+
+        // Versandkostenberechnung (Kapitel 16.1 - 16.3)
+        console.log('┌─────────────────────────┐\n' +
+                    '│ Versandkostenberechnung │\n' +
+                    '└─────────────────────────┘'
+                    )
 
     </script>
 </head>
