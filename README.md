@@ -33,8 +33,11 @@
 - [Übung 29](1-js-basics/day07-lesson29.html): toLowerCase()
 - [Übung 30](1-js-basics/day07-lesson30.html): Nadel im Heuhaufen
 - [Übung 31](1-js-basics/day07-lesson31.html): Artikelnummern ergänzen
-- ...
+- ... (regex)
 - [Übung 34](1-js-basics/day08-lesson34.html): () => {}
 - [Übung 35](1-js-basics/day08-lesson35.html): Spam Mail
 - [Übung 36](1-js-basics/day08-lesson36.html): String transformieren
+- [Übung 37](1-js-basics/day08-lesson37.html): String transformieren mit Function
+- [Übung 38](1-js-basics/day08-lesson38.html): Kraftstoffverbrauch mit Function
+- [Übung 39](1-js-basics/day08-lesson39.html): Link formatieren
 
