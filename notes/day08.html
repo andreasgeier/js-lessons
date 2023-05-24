@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // BMI Rechner
+        // Formel: Körpergewicht geteilt durch Körpergröße in Metern zum Quadrat
+
+        // Values
+        let heightInMeter = '1.7'
+        let weightInKilogramm = '70'
+
+        // Calculate BMI with a function
+        const BMI_CALCULATOR = (height, weight) => {
+            let bmi = (weight / Math.pow(height, 2)).toFixed(1)
+            return bmi
+        }
+
+        // Declare variable with return value of calculator
+        let bmi = BMI_CALCULATOR(heightInMeter, weightInKilogramm)
+
+        // Define result output
+        let message = bmi => {
+            console.log('BMI: ' + bmi)
+            if (bmi <= 20) console.log('Eat more!')
+            if (bmi >= 25) console.log('Eat less and do more sports!')
+            if (bmi > 20 && bmi < 25) console.log('You\'re perfect!')
+        }
+        message(bmi)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

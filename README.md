@@ -33,4 +33,8 @@
 - [Übung 29](1-js-basics/day07-lesson29.html): toLowerCase()
 - [Übung 30](1-js-basics/day07-lesson30.html): Nadel im Heuhaufen
 - [Übung 31](1-js-basics/day07-lesson31.html): Artikelnummern ergänzen
+- ...
+- [Übung 34](1-js-basics/day08-lesson34.html): () => {}
+- [Übung 35](1-js-basics/day08-lesson35.html): Spam Mail
+- [Übung 36](1-js-basics/day08-lesson36.html): String transformieren
 

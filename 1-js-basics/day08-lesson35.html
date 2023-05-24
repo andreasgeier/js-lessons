@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        
+        let spamMail = (poorDude, salutation) => {
+            let message
+
+            // shortened if statement, long version see below
+            salutation === 'Mr.'
+                ? message = 'You have won a Ferrari! CLICK HERE!'
+                : message = 'You have won a Tiffany voucher! CLICK HERE!'
+
+            console.log(`Awesome, ${salutation} ${poorDude}! ${message}`)
+        }
+
+        spamMail('John', 'Mr.')
+        spamMail('Carla', 'Ms.')
+        spamMail('Marie', 'Ms.')
+        spamMail('Tom', 'Mr.')
+
+        /*
+            long if statement:
+
+            if (salutation === 'Mr.') {
+                message = 'You have won a Ferrari! CLICK HERE!'
+            } else {
+                message = 'You have won a Tiffany voucher! CLICK HERE!'
+            }
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
