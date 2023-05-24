@@ -81,20 +81,21 @@
         console.log(maskedCardNumber)
 
         // Functions
+        // Benenne eine Funktion mit Verb am Anfang, z.B. showProduct()
 
         // Deklaration
         function myFunction() { 
             console.log('Ich bin eine "Function"') 
         }
-        let myArrowFunction = () => { console.log('Ich bin eine "Arrow Function"') }
+        let myArrowFunction = () => console.log('Ich bin eine "Arrow Function"')
 
         // Aufruf
         myFunction()
         myArrowFunction()
 
         // Function als Konstante
-        const CALCULATOR_MULTIPLY = (a, b) => {console.log(a * b)} 
-        CALCULATOR_MULTIPLY(3, 5);
+        const CALCULATOR_MULTIPLICATION = (a, b) => console.log(a * b)
+        CALCULATOR_MULTIPLICATION(3, 5);
 
         // Anonyme Funktion, direkt ausgeführt, da () angehängt
         (function() {
