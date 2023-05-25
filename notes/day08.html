@@ -16,12 +16,12 @@
                     )
 
         // Input values
-        let height = 1.7
-        let weight = 76
+        let heightPerson = 1.7
+        let weightPerson = 76
 
         // Calculate BMI with a function
         const BMI_CALCULATOR = () => { 
-            let bmi = (weight / Math.pow(height, 2)).toFixed(1)
+            let bmi = (weightPerson / Math.pow(heightPerson, 2)).toFixed(1)
             return bmi
         }
 
@@ -42,6 +42,42 @@
                     '│ Versandkostenberechnung │\n' +
                     '└─────────────────────────┘'
                     )
+
+        // Konstanten
+        const BASISKOSTEN_PRO_PAKET = 0.7 // (dollar)
+        const KOSTEN_PRO_VOLUMENEINHEIT = 0.001 // (dollar per cm3)
+
+        // Maßangaben zu den Paketen
+        let width = 20
+        let height = 20
+        let length = 20
+        let radius = 10
+
+        // Bestimme Pakettyp
+        let paketTyp
+        (radius === 0) ? paketTyp = 'Box' : paketTyp = 'Zylinder'
+
+        // Berechne Volumen        
+        let volumen = () => {
+            let vol
+            if (radius === 0) vol = width * height * length
+            if (radius !== 0) vol = Math.PI * radius * radius * height
+            return vol
+        }
+
+        // Berechne Kosten
+        let versandKosten = () => volumen() * KOSTEN_PRO_VOLUMENEINHEIT + BASISKOSTEN_PRO_PAKET
+
+        // Ergebnisse
+        console.log(height + ' cm (Pakethöhe)')
+        console.log(width + ' cm (Paketbreite)')
+        console.log(length + ' cm (Paketlänge)')
+        console.log(radius + ' cm (Radius)')
+        console.log(paketTyp + ' (Pakettyp)')
+        console.log(BASISKOSTEN_PRO_PAKET.toFixed(2) + ' $ (Basiskosten pro Versandeinheit)')
+        console.log(KOSTEN_PRO_VOLUMENEINHEIT + ' $/cm3 (Kosten pro Volumeneinheit)')
+        console.log(volumen().toFixed() + ' cm3 (Berechnetes Volumen)')
+        console.log(versandKosten().toFixed(2) + ' $ (Versandkosten gesamt)')
 
     </script>
 </head>
