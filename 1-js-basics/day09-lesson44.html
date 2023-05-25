@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        /*
+            NerdWorld stellt Ihnen eine neue Aufgabe: Die Mitarbeiter haben 
+            Produkte früher in Excel-Listen verwaltet. Zu Migrationszwecken 
+            haben die Mitarbeiter sie nun als CSV-Dateien (comma separated 
+            values) exportiert. Damit sind dann alle Elemente in einer Liste 
+            durch Kommas getrennt.
+            Schreiben Sie eine Funktion, die einen übergebenen CSV-String in 
+            ein Array splittet und alphabetisch sortiert. Loggen Sie das fertig 
+            verarbeitete Array als Liste (pro Produkt eine Zeile) in die 
+            Konsole.
+        */
+
+        // CSV
+        let csvExport = '3Doodler 3D Printing Pen, Game of Thrones Wax Seal Coasters, 10th Doctor Sonic Screwdriver Exclusive Programmable TV Remote, Electronic Butterfly in a Jar, Aquafarm: Aquaponics Fish Garden, Cassette Adapter Bluetooth, Marvel Comics Lightweight Infinity Scarf, Ollie - The App Controlled Robot, Sound Splash Bluetooth Waterproof Shower Speaker, PowerCube, Backpack of Holding, Retro Duo Portable NES/SNES Game System, Universal Gadget Wrist Charger, USB Squirming Tentacle, USB Fishquarium, Space Bar Keyboard Organizer & USB Hub Pop, USB Pet Rock, Powerstation 5- E. Maximus Chargus, Dual Heated Travel Mug, Crosley Collegiate Portable USB Turntable, Meh Hoodie, Magnetic Accelerator Cannon, 8-Bit Heat-Change Mug'
+
+        // Funktion: in array umwandeln und sortieren
+        // Funktionslos wäre: let csvToArray = csvExport.split(', ').sort()
+        let csvToArray = list => list.split(', ').sort()
+
+        // Ausgabe
+        console.log(csvToArray(csvExport).join('\n'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

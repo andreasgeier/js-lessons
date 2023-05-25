@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        /*
+            (Kapitel 17.13)
+            Nach dem Backen wollen Sie ein bisschen Bus fahren. Sie selbst 
+            befinden sich in Nürnberg in der Nähe der Haltestelle 
+            Nordostbahnhof. Ihre Freunde, die Sie und Ihre Kekse schon freudig 
+            erwarten, wohnen bei der Haltestelle Martha-Maria-Krkhs. Da Sie 
+            aber nur ein Kurzstrecken-Ticket lösen wollen, müssen Sie den Rest 
+            der Strecke laufen. Deswegen benötigen Sie die Haltestellen-Liste 
+            (Abb. 38) nur bis zur letzten Haltestelle mit weißem Punkt 
+            (Hubertusstr.).
+
+            1. Erstellen Sie ein Array mit den Haltestellen der Linie 46.
+
+            2. Finden Sie die Position der gewünschten Zielhaltestelle 
+            Hubertusstr. heraus.
+
+            3. Entfernen Sie alle Haltestellen nach Hubertusstr. aus dem Array.
+
+            4. Schreiben Sie eine Funktion, die Ihnen nach Übergabe einer 
+            beliebigen Zielhaltestelle ein Array mit allen Haltestellen ab 
+            Nordostbahnhof bis zur Zielhaltestelle zurückgibt.
+            
+            5. Erweitern Sie die Funktion, sodass Sie auch die Starthaltestelle 
+            übergeben können.
+        */
+
+        // Erstelle array der Haltestellen
+        let BUS_LINIE_46 = [
+            'Nordostbahnhof',
+            'Theresienkrankenhaus',
+            'Teutoburger Str.',
+            'Leipziger Str.',
+            'Dresdener Str.',
+            'Spitalhof',
+            'Hubertusstr.',
+            'Tattersall',
+            'Martha-Maria-Krkhs.',
+        ]
+
+        // Finde Position der Hubertusstr.
+        let indexHubertus = BUS_LINIE_46.indexOf('Hubertusstr.')
+
+        // Entferne Haltestellen nach Hubertusstr.
+        let kurzstrecke = BUS_LINIE_46.slice(0, (indexHubertus + 1))
+
+        // Funktion für Kurzstrecke mit Zielauswahl
+        let meineKurzstreckenAnfrage = ziel => {
+            let indexZiel = BUS_LINIE_46.indexOf(ziel)
+            let strecke = BUS_LINIE_46.slice(0, indexZiel + 1)
+            return strecke
+        }
+        let meineRoute = meineKurzstreckenAnfrage('Teutoburger Str.')
+        console.log(meineRoute)
+
+        // Erweitere Funktion um Starthaltestelle
+        let meineKurzstreckenAnfrage2 = (start, ziel) => {
+            let indexStart = BUS_LINIE_46.indexOf(start)
+            let indexZiel = BUS_LINIE_46.indexOf(ziel)
+            let strecke = BUS_LINIE_46.slice(indexStart, indexZiel + 1)
+            return strecke
+        }
+        let meineRoute2 = meineKurzstreckenAnfrage2('Dresdener Str.', 'Tattersall')
+        console.log(meineRoute2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

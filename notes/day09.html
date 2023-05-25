@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // arrays
+        let usersOnline = ['Tom', 'Paula', 'Charlie']
+        console.log(usersOnline.length) // 3
+
+        usersOnline = [
+            'Tom',
+            'Paula',
+            'Charlie',
+            'Anke'
+        ]
+        console.log(usersOnline.length) // 4
+
+        // Indexoperator
+        console.log(usersOnline)
+        console.log('Auf Position 2: ' + usersOnline[2]) // Charlie
+
+        // push() für neue Einträge
+        usersOnline.push('Rebecca')
+
+        // pop() zum Entfernen des letzten Eintrags
+        usersOnline.pop() // entfernt letzten Eintrag (Rebecca)
+
+        let userLeft = usersOnline.pop() // entfernt & retourniert (Anke)
+        console.log(`${userLeft} just left.`) // 'Anke just left.'
+        console.log(usersOnline)
+
+        // splice() zum Entfernen/Hinzufügen beliebiger Einträge
+        usersOnline.splice(0, 2) // entfernt Position 0, 2 Einträge lang
+        console.log(usersOnline)
+
+        usersOnline.splice(1, 0, 'Peter') // Peter auf Position 1 eingefügt
+        console.log(usersOnline)
+
+        usersOnline.splice(1, 1, 'Jane') // Peter entfernt, Jane hinzugefügt
+        console.log(usersOnline)
+
+        // sort()
+        // Achtung: sortiert alphabetisch, nicht geeignet für numerisch
+        usersOnline = [
+            'Tom',
+            '@hacker',
+            'Paula',
+            '123Charlie',
+            'Anke'
+        ]
+        console.log('Unsortiert: ' + usersOnline)
+
+        usersOnline.sort() // sortiert alle Einträge
+        console.log('Alphabetisch sortiert: ' + usersOnline)
+
+        // "hack" für numerische Suche mit compare Funktion
+        // mehr hier: https://www.ceos3c.com/javascript/how-to-sort-numbers-in-javascript/
+        var numArray = [3, 8, -10, 23, 19, -4, -14, 27]
+        numArray.sort((a, b) => a - b) // that's the magic :)
+        console.log('Zahlen sortieren mit higher order function: ' + numArray)
+        numArray.sort((a, b) => b - a) // reversed sorting
+        console.log('... und absteigend: ' + numArray)
+
+        // join() gibt array als string aus
+        console.log('String mit eingefügtem Umbruch: \n' + 
+                     usersOnline.join('\n'))
+
+        // indexOf()
+        console.log(usersOnline.indexOf('Anke')) // 2
+        console.log(usersOnline.indexOf('Johnny')) // -1 (nicht gefunden)
+
+        // reverse()
+        usersOnline.sort().reverse() // kehrt Sortierung um
+        console.log('Absteigend (reverse) alphabetisch sortiert: ' + usersOnline) 
+
+        // split()
+        let welcomeMessage = 'Welcome to my website'
+        console.log(welcomeMessage)
+        let messageAsArray = welcomeMessage.split(' ')
+        console.log(messageAsArray)
+        let messageAsArray2 = welcomeMessage.split('') // splittet jedes Zeichen
+        console.log(messageAsArray2)
+
+        // Kurioses Passwort (Kapitel 17.10)
+        let passwordFor = name => name.split('').reverse().join('')
+        console.log(passwordFor('Jonathan'))
+
+        // concat() verbindet ein array mit einem/mehreren Elementen
+        let piece1 = [1, 2, 3]
+        let piece2 = ['A', 'B']
+        let together = piece1.concat(piece2)
+        console.log(together)
+        let together2 = piece2.concat('C', 'D', 5, piece1)
+        console.log(together2)
+
+        // fill()
+        let someArray = [1, null, undefined, true]
+        someArray.fill('a')
+        console.log(someArray)
+
+        // includes()
+        let fancyArray = ['abc', 'bc', 'c']
+        console.log(fancyArray.includes('f')) // false
+        console.log(fancyArray.includes('b')) // false
+        console.log(fancyArray.includes('bc')) // true
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

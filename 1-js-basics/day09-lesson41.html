@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        /*
+            Sie wollen ein digitales Rezeptbuch schreiben, und die Zutaten für 
+            das jeweilige Rezept stellen Sie in einem Array zur Verfügung.
+
+            1. Legen Sie für das erste Rezept — Haferflocken-Kekse — ein Array 
+            mit den folgenden Zutaten an:
+            70 ml Rapsöl
+            1 getrenntes Ei
+            100 g Zucker
+            1 TL Backpulver
+        */
+        let zutaten = [
+            '70 ml Rapsöl',
+            '1 getrenntes Ei',
+            '100 g Zucker',
+            '1 TL Backpulver'
+        ]
+        console.log(zutaten)
+
+        /*
+            2. Da in der Liste das Mehl fehlt, müssen Sie 1 EL Mehl noch 
+            nachträglich ergänzen.
+        */
+        zutaten.push('1 EL Mehl')
+        console.log(zutaten)
+        
+        /*
+            3. Beim Durchlesen der Liste fällt auf, dass die wohl wichtigste 
+            Zutat ebenfalls fehlt. Fügen Sie noch 100g Haferflocken an die 
+            erste Position in die Zutatenliste ein.
+        */
+        zutaten.splice(0, 0, '100 g Haferflocken')
+        console.log(zutaten)
+
+        /*
+            4. Für Kekse ist es eigentlich besser, Butter statt Öl zu 
+            verwenden. Tauschen Sie das Öl in der Liste dementsprechend gegen 
+            75 g Butter aus.
+        */
+        zutaten.splice(1, 1, '75 g Butter')
+        console.log(zutaten)
+        
+        /*
+            5. Wandeln Sie das Array nun in einen String um und speichern Sie 
+            diesen in einer Variablen. Dabei sollen die Zutaten als Liste 
+            ausgegeben werden.
+        */
+        let zutatenString = zutaten.join('\n')
+        console.log(zutatenString)
+
+        /*
+            6. Und damit die Rezeptspielerei nicht total sinnlos war, bekommen 
+            Sie natürlich noch die Anleitung von uns dazu. Speichern Sie auch 
+            diese in einer Variable und geben Sie das komplette Rezept in der 
+            Konsole aus.
+        */
+        let rezept = '┌────────────────────┐\n' +
+                     '│ HAFERFLOCKEN-KEKSE │\n' +
+                     '└────────────────────┘\n\n' +
+                     'Zutaten:\n\n' + 
+                     zutatenString +
+                     '\n\n' +
+                     'Zubereitung:\n\n' + 
+                     'Schmelzen Sie die Butter in einer Pfanne, geben Sie ' +
+                     'die Haferflocken dazu und vermischen Sie alles gut ' +
+                     'miteinander.\n\n' +
+                     'Nehmen Sie die Masse danach vom Herd und lassen Sie ' +
+                     'sie etwas auskühlen. Nun schlagen Sie das Eiweiß mit ' +
+                     'Zucker steif und rühren Eigelb, Backpulver und Mehl ' +
+                     'unter. Vermengen Sie nun die Masse mit den abgekühlten ' +
+                     'Haferflocken.\n\n' +
+                     'Setzen Sie kleine Teighäufchen auf ein Backblech. Die ' +
+                     'Häufchen sollten nicht zu groß sein, da der Teig beim ' +
+                     'Backen etwas auseinanderläuft. Im vorgeheizten ' +
+                     'Backofen bei 170 °C 15 Minuten backen.'
+        console.log(rezept)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

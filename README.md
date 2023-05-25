@@ -41,4 +41,8 @@
 - [Übung 38](1-js-basics/day08-lesson38.html): Kraftstoffverbrauch mit Function
 - [Übung 39](1-js-basics/day08-lesson39.html): Link formatieren
 - [Übung 40](1-js-basics/day08-lesson40.html): Celsius zu Fahrenheit
+- [Übung 41](1-js-basics/day09-lesson41.html): Keks-Rezept
+- [Übung 42](1-js-basics/day09-lesson42.html): Busstrecke
+- [Übung 43](1-js-basics/day09-lesson43.html): Filmliste
+- [Übung 44](1-js-basics/day09-lesson44.html): CSV in array umwandeln
 
