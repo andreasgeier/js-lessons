@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        // Check in with Jens at (just before) 10, 12, 14:30
+
+        /*
+            Regex (Kapitel 14)
+        
+            METAZEICHEN
+            -----------
+
+            Der Punkt .
+            ..re => Punkte stehen für jedes Zeichen außer Zeilenumbruch
+            tree // => tree
+            three // => hree
+            treehouse // => tree
+            
+            Zeichenklasse, Zeichenmenge [] 
+            [Ee]s6
+            es6 // => es6
+            Es6 // => Es6
+            ES6 // =>
+
+            Negierte Zeichenklasse [^]
+            Entspricht jedem Zeichen, das nicht in der Klammer definiert wird
+            [^t]ree
+            tree // =>
+            three // => hree
+            treehouse // =>
+
+            Wiederholungen *
+            [0-9]*
+            23454324 // => 23454324
+            0176 // => 0176
+            DE // =>
+            343 // => 343
+            DE3AE // => 3
+
+            d.+d
+            dd // =>
+            d d // => d d
+            dad // => dad
+            it is bad if you are bad to be honest // => d if you are bad
+
+            [D]?as
+            Das Schiff fährt im Wasser. // => Das, as
+            [D]as
+            Das Schiff fährt im Wasser. // => Das
+
+            {n,m}
+            Anzahl der Wiederholungen: mindestens n, maximal m
+            [0-9]{2,3}
+            Die Nummer 9.9997 runden wir zu 10.0 auf. // => 999, 10
+            Die zweite Zahl, also »m«, kann weggelassen werden. Damit ist nur 
+            die minimale Anzahl an Wiederholungen angegeben worden und die 
+            maximale Anzahl offen. 
+            [0-9]{2,}
+            Die Nummer 9.9997 runden wir zu 10.0 auf. // => 9997, 10
+            Wird auch das Komma weggelassen, müssen genau so viele 
+            Teilausdrücke hintereinander übereinstimmen wie durch »n« definiert.
+            [0-9]{3}
+            Die Nummer 9.9997 runden wir zu 10.0 auf. // => 999
+
+            Gruppieren ()
+            DE([0-9]{2} [0-9]{5})
+            DE60 12345 DE6012345 // => DE60 12345
+            DE60 123456 60 12345 // => DE60 12345
+
+            Alternation |
+            Lässt sich lesen wie "oder"
+            [D|W]as
+            Das Schiff fährt im Wasser. //=> Das, Was
+
+            Escape \
+            \+
+            1 + 2 ergibt 3 // => +
+
+            Beginn der Zeichenkette ^
+            ^das
+            das ist das selbe // => das
+
+            Ende der Zeichenkette $
+            er$
+            Der heißt Peter // => er
+
+            VORDEFINIERTE ZEICHENKLASSEN
+            ----------------------------
+
+            \w = alle alphanumerischen Zeichen [a-zA-Z0-9_]
+            \W = Negation
+            \d = alle Ziffern [0-9]
+            \D = Negation
+            \s = alle Leerräume [\t\n\f\r\p{Z}]
+            \S = Negation
+
+            MODIFIKATOREN
+            -------------
+
+            Global match g
+            Ohne g Abbruch nach dem ersten Treffer
+            /o|m/
+            lorem ipsum // => o
+            /o|m/g
+            lorem ipsum // => o, m, m
+
+            Ignore case i
+            /Hi/i
+            Hi // => Hi
+            HI // => HI
+            hi // => hi
+
+            Mulitline m
+            Sucht über mehrere Zeilen
+        */
+
+        // Regex und Javascript
+
+        // Durchsuche String mit match()
+        console.log('Javascript ist cool'.match(/\W/g)) // [' ', ' ']
+        console.log('Hi Tom'.match(/T/g)) // ['T']
+        console.log('mail(at)domain.com'.match(/@/g)) // null
+
+        // replace()
+        let string = 'Ich sehe sie. Nehmen sie sich in Acht.'
+        string = string.replace(/(sie)/g, 'Sie')
+        console.log(string)
+
+        // search()
+        let term = '2/5'
+        let result = 'Ihre Eingabe war ' + (term[term.search(/\//g) + 1] === '0' ? 'fehlerhaft' : 'korrekt')
+        console.log(result)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
