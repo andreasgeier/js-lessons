@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 45: Stadt, Land, Fluss
+            Bei dem bekannten deutschen Quiz-Spiel »Stadt, Land, Fluss« müssen 
+            die Spieler zu bestimmten Kategorien Wörter finden, die mit einem 
+            bestimmten Buchstaben beginnen. Jeder schreibt die Wörter für sich 
+            alleine auf. Sobald einer der Spieler für jede Kategorie ein Wort 
+            gefunden hat, ruft er »Stop« und alle müssen das Aufschreiben 
+            einstellen. Dann wird verglichen. Mehrfach gefundene Wörter werden 
+            gestrichen, alle anderen erhalten je nach Spielregel und Variante 
+            Punkte.
+            Bei einer Variante des Spiels ist zusätzlich die Wortlänge 
+            ausschlaggebend. Das längste Wort bringt dabei die meisten Punkte. 
+            Natürlich möchte niemand tatsächlich die Buchstaben der Wörter 
+            zählen. Dafür gibt es schließlich JS.
+            Schreiben Sie eine Funktion, die Wörter einer Kategorie nach Länge 
+            sortiert. Das längste Wort soll dabei vorne stehen.
+        */
+
+        let city = ['Barcelona', 'Basel', 'Belgrade', 'Berlin', 'Budapest']
+        let country = ['Belgium', 'Bulgaria', 'Brazil', 'Bolivia', 'Bosnia and Herzegovina']
+        let river = ['Bode', 'Brahmaputra', 'Beuvron', 'Black River', 'Belaja']
+        
+        // let sortLongestWordFirst = (a, b) => { 
+        //     if (a.length < b.length) return 1 
+        //     if (a.length > b.length) return -1
+        //     if (a.length === b.length) return 0
+        // }
+
+        let sortLongestWordFirst = (a, b) => b.length - a.length
+
+        // console.log(city.sort(sortLongestWordFirst))
+        // console.log(country.sort(sortLongestWordFirst))
+        // console.log(river.sort(sortLongestWordFirst))
+
+        let winner = category => category.sort(sortLongestWordFirst)[0]
+
+        console.log(`In der Kategorie "Stadt" gewinnt "${winner(city)}".`)
+        console.log(`In der Kategorie "Land" gewinnt "${winner(country)}".`)
+        console.log(`In der Kategorie "Fluss" gewinnt "${winner(river)}".`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -45,4 +45,4 @@
 - [Übung 42](1-js-basics/day09-lesson42.html): Busstrecke
 - [Übung 43](1-js-basics/day09-lesson43.html): Filmliste
 - [Übung 44](1-js-basics/day09-lesson44.html): CSV in array umwandeln
-
+- [Übung 45](1-js-basics/day12-lesson45.html): Stadt, Land, Fluss

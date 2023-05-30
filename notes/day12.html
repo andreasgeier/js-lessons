@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        /* 
+            Schleifen for & while
+        */
+
+        // for
+        let myNumbers = [1, 2, 3]
+        for (let i = 0; i < myNumbers.length; i++) {
+            console.log(myNumbers[i])
+        }
+
+        // while
+        let myAlphabet = ['a', 'b', 'c']
+        let i = 0
+        while (i < myAlphabet.length) {
+            console.log(myAlphabet[i])
+            i++
+        }
+
+        // Kapitel 18
+        // Reduziere array auf strings mit filter()
+        let array = [
+            'Tom',
+            1,
+            'Anna',
+            'Charlie',
+            14,
+            8
+        ]
+        let stringOnlyArray = array.filter(el => typeof el === 'string')
+        console.log(stringOnlyArray)
+
+        /*
+            Kapitel 19
+            High Order Functions
+            A “higher-order function” is a function that accepts functions as 
+            parameters and/or returns a function.
+        */
+        
+        // map()
+        // let abc = ['a', 'b', 'c', 'd', 'e']
+        // let output = el => console.log(el.map())
+        // output(abc)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
