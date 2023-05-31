@@ -61,6 +61,8 @@
 
 ## notes
 
+##### js-basics, week 1 - ...
+
 [Day 01](notes/day01.html): Strings und Operatoren
 --- [Day 02](notes/day02.html): Variablen, typeof, String-Verkettung
 --- [Day 03](notes/day03.html): Typkonvertierung, Math API
