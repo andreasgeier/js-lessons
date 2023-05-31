@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Kapitel 19
+
+        // sort() gibt die Werte 1, 0, -1 zurück
+        // -1 (z.B. a - b als 12 - 16) => nicht tauschen
+        // 0 => nicht tauschen
+        // 1 => tauschen
+        let fct = (a, b) => a - b
+        let arr = [1, 12, 16, 24, 2]
+        let result = arr.sort(fct) // fct ist eine callback function
+
+        console.log(result) // [1, 2, 12, 16, 24]
+
+        // außerhalb von sort() erhalte ich tatsächliche Werte
+        console.log(fct(1, 12)) // -11
+        console.log(fct(24, 2)) // 22
+
+        // map()
+        let employees = [
+            'Adelgunde',
+            'Heribert',
+            'Mechthild',
+            'Friedlinde',
+            'Tusnelda',
+            'Oswine',
+            'Ladislaus',
+        ]
+
+        // 1. 
+        // Schritt-für-Schritt Version
+        // Array in Buchstaben aufsplitten
+        let employeesSplit = 'Adelgunde'.split('')
+        console.log(employeesSplit)
+
+        // Buchstaben rückwärts anordnen
+        let employeesReverse = employeesSplit.reverse()
+        console.log(employeesReverse)
+
+        // Array in string verwandeln
+        let employeesJoin = employeesReverse.join('')
+        console.log(employeesJoin)
+
+        // Länge als Zahl dazu
+        let employeesLength = employeesJoin + employeesJoin.length
+        console.log(employeesLength)
+
+        // 2.
+        // Als Funktion
+        let createPwAndReturn = name => {
+            let pw = name.split('').reverse().join('') + name.length
+            return pw
+        }
+        console.log(createPwAndReturn('Heribert'))
+
+        // 3.
+        // Als einzeilige Funktion
+        let createPw = name => name.split('').reverse().join('') + name.length
+        console.log(createPw('Mechthild'))
+
+        // 4.
+        // Als callback Funktion
+        let pwList = arr => arr.map(createPw)
+        console.log(pwList(employees))
+
+        /*
+            Higher Order & Callback Functions
+            Im untenstehenden Beispiel ist map() die High-Order-Function und
+            double() die Callback funtion.
+        */
+        let double = n => n * 2
+        let m = [1, 2, 3].map(double)
+        console.log(m)
+
+        // Im folgenden Beispiel ist n => n * 2 eine anonyme Funktion
+        let p = [1, 2, 3].map(n => n * 2)
+
+        /* 
+            Kapitel 19.5
+            Wir haben festgestellt, dass unsere Kunden gerne Produktlisten 
+            ausdrucken, um sie ihren Freunden zu zeigen. Damit diese Listen 
+            etwas besser strukturiert sind, möchten wir sie wie ein 
+            Stichwortverzeichnis in einem Buch aufbauen. Das heißt, zuerst wird 
+            der Buchstabe als Überschrift gelistet und darunter alle Produkte, 
+            die mit diesem Buchstaben beginnen.
+        */
+        let products = [
+            'Game of Thrones Wax Seal Coasters',
+            'Electronic Butterfly in a Jar',
+            'Aquafarm: Aquaponics Fish Garden',
+            'Cassette Adapter Bluetooth',
+            'Marvel Comics Lightweight Infinity Scarf',
+            'Ollie - The App Controlled Robot',
+            'Sound Splash Bluetooth Waterproof Shower Speaker',
+            'PowerCube',
+            'Backpack of Holding',
+            'Retro Duo Portable NES/SNES Game System',
+            'Universal Gadget Wrist Charger',
+            'USB Squirming Tentacle',
+            'USB Fishquarium',
+            'Space Bar Keyboard Organizer & USB Hub Pop',
+            'USB Pet Rock',
+            'Powerstation 5- E. Maximus Chargus',
+            'Dual Heated Travel Mug',
+            'Crosley Collegiate Portable USB Turntable',
+            'Meh Hoodie',
+            'Magnetic Accelerator Cannon',
+        ]
+
+        // Suche array element mit Buchstabe x
+        let findProducts = (arr, letter) => arr.filter(el => el.startsWith(letter))
+        
+        console.log('D:\n' + findProducts(products, 'D').join('\n'))
+        console.log('M:\n' + findProducts(products, 'M').join('\n'))
+        console.log('S:\n' + findProducts(products, 'S').join('\n'))
+
+        let abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        let abcArray = abc.split('')
+        let productsAbc = abcArray.concat(products)
+        
+        console.log(productsAbc.sort().join('\n'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

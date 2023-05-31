@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Ferdinand Füller mag Brettspiele von Friedemann Friese. Filtern Sie 
+            nur die Spiele aus der angegebenen Liste der Brettspiele heraus, 
+            die mit dem Buchstaben F beginnen.
+            Ersetzen Sie dazu die Kommentare ??? durch den richtigen Code.
+        */
+
+        let startsWithLetterF = title => title.startsWith('F')
+
+        let boardgames = [
+            'Caverna',
+            'Puerto Rico',
+            'Agricola',
+            'Black Friday',
+            'Funny Friends',
+            'Fauna',
+            'Eclipse',
+            'Codenames',
+            'Dominion',
+            'Fairy Tale',
+            'Fast Flowing Forest Fellers',
+            'Fearsome Floors'
+        ]
+        let boardgamesStartingWithF = boardgames.filter(startsWithLetterF)
+
+        console.log(boardgamesStartingWithF) // => [ 'Funny Friends', 'Fauna', 'Fast Flowing Forest Fellers', 'Fearsome Floors']
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

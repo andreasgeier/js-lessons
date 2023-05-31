@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Passen Sie die Funktion transformName aus Übung 37 so an, dass sie 
+            beliebig viele Vornamen (als Array) verwerten kann.
+
+            Beispielaufruf:
+            transformName(['Ladislaus', 'Coolio', 'Barry'], 'Jones')
+            // => 'L. C. B. Jones'
+        */
+
+        // 1. SCHRITT-FÜR-SCHRITT
+
+        // Erstelle Variablen für Vor- und Nachname
+        let firstNames = ['Hedwig', 'Adele', 'Ottilia']
+        let lastName = 'von Hagenburg'
+
+        // Erster Buchstabe aus Vornamen (array) finden
+        let firstLetter = 'Hedwig'.charAt(0)
+        console.log(firstLetter)
+
+        // Vornamen mit Punkt und Leerzeichen wieder als string verbinden
+        let firstLetterWithDot = firstLetter + '. '
+        console.log(firstLetterWithDot)
+
+        // 2. ALS FUNKTION
+        let createIntial = name => name.charAt(0) + '. '
+        console.log(createIntial(firstNames[0]))
+        console.log(createIntial(firstNames[1]))
+        console.log(createIntial(firstNames[2]))
+
+        // 3. ALS CALLBACK FUNCTION
+        let createInitials = arr => arr.map(el => (el.charAt(0) + '. '))
+
+        // 4. AUSGABE
+        console.log(createInitials(firstNames).join('') + lastName)
+
+        /*
+            Zusatzaufgabe:
+            Den ersten Vornamen nicht kürzen
+        */
+
+        let firstNameOfFirstNames = firstNames.shift()
+        let firstNamesAllOthers = firstNames.slice(0)
+
+        console.log(
+            firstNameOfFirstNames + 
+            ' ' + 
+            createInitials(firstNamesAllOthers).join('') + 
+            lastName
+            )
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

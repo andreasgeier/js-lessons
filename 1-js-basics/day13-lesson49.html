@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Auch zu filter haben wir einen kleinen Lückentext vorbereitet. 
+            Ersetzen Sie wieder die Kommentare ??? durch den richtigen Code, um 
+            das angegebene Ergebnis zu erzielen.
+        */
+
+        let result
+
+        //even numbers
+        let inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        result = inputs.filter(x => x % 2 === 0)
+        console.log(result) // => [2, 4, 6, 8, 10]
+
+        //names ending with letter 'e' or 'a'
+        let names = ['Heribert', 'Friedlinde', 'Tusnelda', 'Oswine', 'Ladislaus']
+        result = names.filter(n => n.endsWith('e') || n.endsWith('a'))
+        console.log(result) // => [ 'Friedlinde', 'Tusnelda', 'Oswine' ]
+
+        //words with at least three letters
+        let text = 'Hi this is a short text'
+        result = text.split(' ').filter(el => el.length >= 3).join(' ')
+        console.log(result) // => 'this short text'
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
