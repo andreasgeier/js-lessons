@@ -2,6 +2,8 @@
 
 ### 1-js-basics
 
+##### week 1
+
 - [Übung 01](1-js-basics/day01-lesson01.html): console.log()
 - [Übung 02](1-js-basics/day01-lesson02.html): alert()
 - [Übung 03](1-js-basics/day01-lesson03.html): division, modulo
@@ -24,6 +26,9 @@
 - [Übung 20](1-js-basics/day05-lesson20.html): if & else
 - [Übung 21](1-js-basics/day05-lesson21.html): Gewichtskontrolle
 - [Übung 22](1-js-basics/day05-lesson22.html): Schaltjahr
+
+##### week 2
+
 - [Übung 23](1-js-basics/day06-lesson23.html): Quiz mit 3 Fragen
 - [Übung 24](1-js-basics/day06-lesson24.html): Eingaben prüfen
 - [Übung 25](1-js-basics/day06-lesson25.html): Schaltjahr-Rechner
@@ -45,4 +50,11 @@
 - [Übung 42](1-js-basics/day09-lesson42.html): Busstrecke
 - [Übung 43](1-js-basics/day09-lesson43.html): Filmliste
 - [Übung 44](1-js-basics/day09-lesson44.html): CSV in array umwandeln
+
+##### week 3
+
 - [Übung 45](1-js-basics/day12-lesson45.html): Stadt, Land, Fluss
+- [Übung 46](1-js-basics/day13-lesson46.html): map()
+- [Übung 47](1-js-basics/day13-lesson47.html): Übung: Inititalen
+- [Übung 48](1-js-basics/day13-lesson48.html): filter()
+- [Übung 49](1-js-basics/day13-lesson49.html): filter() mit callback functions
