@@ -61,4 +61,14 @@
 
 ## notes
 
-[Day 01](notes/day01.html): Tag 1
+[Day 01](notes/day01.html): Strings und Operatoren
+--- [Day 02](notes/day02.html): Variablen, typeof, String-Verkettung
+--- [Day 03](notes/day03.html): Typkonvertierung, Math API
+--- [Day 05](notes/day05.html): Boolean, if & else
+--- [Day 06](notes/day06.html): Pseudo-Code, Nicht-Operator
+--- [Day 07](notes/day07.html): String-Methoden, Funktionen
+--- [Day 08](notes/day08.html): Funktionen
+--- [Day 09](notes/day09.html): Arrays und Array-Methoden
+--- [Day 10](notes/day10.html): (Regex))
+--- [Day 12](notes/day12.html): Schleifen for & while
+--- [Day 13](notes/day13.html): Callback Functions
