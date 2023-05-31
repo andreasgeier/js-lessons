@@ -1,6 +1,4 @@
-# Index
-
-### 1-js-basics
+## 1-js-basics
 
 ##### week 1
 
@@ -58,3 +56,9 @@
 --- [Übung 47](1-js-basics/day13-lesson47.html): Übung: Inititalen
 --- [Übung 48](1-js-basics/day13-lesson48.html): filter()
 --- [Übung 49](1-js-basics/day13-lesson49.html): filter() mit callback functions
+
+<br>
+
+## notes
+
+[Day 01](notes/day01.html): Tag 1
