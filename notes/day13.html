@@ -128,6 +128,27 @@
         
         console.log(productsAbc.sort().join('\n'))
 
+        // reduce()
+
+        // Funktion, die a und b addiert und Summe zurückgibt
+        let add = (a, b) => a + b
+        let prices = [1.99, 4, 12.99, 143.49]
+        // Hier reduce um alle Zahlen des arrays zu summieren
+        // Zweiter Wert '0' ist Fallback falls Array leer
+        let sum = arr => arr.reduce(add, 0)
+        console.log(sum(prices))
+
+        // Altersprüfung mit some()
+        const PRUEFE_ALTER_AB = 18
+        let fskFilmeImWarenkorb = [6, 6, 6, 0, 12, 16, 0, 18, 6, 0, 6]
+
+        let ab18 = fskFilm => fskFilm >= PRUEFE_ALTER_AB
+
+        let check = fskFilmeImWarenkorb.some(ab18)
+        console.log(check)
+
+        if (check) console.log('Altersprüfung notwendig!')
+
     </script>
 </head>
 <body>
