@@ -56,6 +56,9 @@
 --- [Lesson 47](1-js-basics/day13-lesson47.html): Lesson: Inititalen
 --- [Lesson 48](1-js-basics/day13-lesson48.html): filter()
 --- [Lesson 49](1-js-basics/day13-lesson49.html): filter() mit callback functions
+--- [Lesson 50](1-js-basics/day14-lesson50.html): Übungen zu Arrays
+--- [Lesson 51](1-js-basics/day14-lesson51.html): Cocktails mixen
+--- [Lesson 52](1-js-basics/day14-lesson52.html): Quersumme-Rechner
 
 <br>
 
