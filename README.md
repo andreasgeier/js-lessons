@@ -59,6 +59,7 @@
 --- [Lesson 50](1-js-basics/day14-lesson50.html): Übungen zu Arrays
 --- [Lesson 51](1-js-basics/day14-lesson51.html): Cocktails mixen
 --- [Lesson 52](1-js-basics/day14-lesson52.html): Quersumme-Rechner
+--- [Lesson 53](1-js-basics/day14-lesson53.html): Sortieren nach Quersumme
 
 <br>
 
