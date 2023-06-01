@@ -60,6 +60,7 @@
 --- [Lesson 51](1-js-basics/day14-lesson51.html): Cocktails mixen
 --- [Lesson 52](1-js-basics/day14-lesson52.html): Quersumme-Rechner
 --- [Lesson 53](1-js-basics/day14-lesson53.html): Sortieren nach Quersumme
+--- [Lesson 54](1-js-basics/day14-lesson54.html): Suchfilter
 
 <br>
 
