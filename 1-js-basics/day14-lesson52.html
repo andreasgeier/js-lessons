@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Schreiben Sie eine Funktion digitSum, die die Quersumme einer 
+            übergebenen Zahl zurückgibt. Hinweis: Die Quersumme ist die Summe 
+            aller Ziffern einer Zahl.
+        */
+
+        let zahl = '1234'
+
+        // Zahl in Array aufsplitten
+        let toArr = zahl.split('')
+        console.log(toArr)
+
+        // Array Elemente in Number umwandeln
+        let toNmbr = toArr.map(a => Number(a))
+        console.log(toNmbr)
+
+        // Array Elemente summieren
+        let toSum = toNmbr.reduce((a, b) => a + b, 0)
+        console.log(toSum)
+
+        // In einem Schritt
+        let quersumme = zahl.split('').map(Number).reduce((a, b) => a + b, 0)
+        console.log('Quersumme: ' + quersumme)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
