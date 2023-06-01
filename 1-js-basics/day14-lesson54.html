@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Filtern Sie die Spiele aus der angegebenen Liste heraus, bei denen 
+            alle Wörter mit dem Buchstaben F beginnen und die aus mindestens 
+            zwei Wörten bestehen — also z.B. Fearsome Floors, aber nicht Fauna 
+            oder Black Friday.
+        */
+
+        let boardgames = [
+            'Caverna',
+            'Puerto Rico',
+            'Agricola',
+            'Black Friday',
+            'Funny Friends',
+            'Fauna',
+            'Eclipse',
+            'Codenames',
+            'Dominion',
+            'Fairy Tale',
+            'Fast Flowing Forest Fellers',
+            'Fearsome Floors'
+        ]
+
+        // Finde Listeneinträge, die mit F beginnen
+        let gamesWithF = boardgames.filter(el => el.startsWith('F'))
+
+        console.log(gamesWithF)
+
+        // Finde Listeneinträge, die ein Leerzeichen enthalten (also mindestens
+        // aus zwei Wörtern bestehen)
+        let gamesWithEmptySpace = boardgames.filter(el => el.search(' ') !== -1)
+
+        console.log(gamesWithEmptySpace)
+
+        // Kombiniere beide Bedingungen
+        let gamesFilter = boardgames.filter(el => el.startsWith('F') && el.search(' ') !== -1)
+        
+        console.log(gamesFilter)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
