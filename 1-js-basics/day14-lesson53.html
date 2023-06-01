@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Verwenden Sie die Funktion quersumme aus der letzten Übung. Nutzen 
+            Sie die Funktion dieses Mal, um gleich ein ganzes Array von Zahlen 
+            nach ihrer Quersumme zu sortieren.
+        */
+
+        let numbers = [99, 5, 8, 12, 111, 123]
+
+        // Funktion für Quersumme aus vorheriger Übung 53, ergänzt um
+        // toString() da array diesmal Nummern enthält
+        let quersumme = el => el.toString().split('').map(Number).reduce((a, b) => a + b, 0)
+
+        // Sortierfunktion nach Quersummen
+        let sortByQuersumme = (a, b) => quersumme(a) - quersumme(b)
+
+        // Sortieren
+        let numbersSortiert = numbers.sort(sortByQuersumme)
+
+        // Ergebnisausgabe
+        console.log(numbersSortiert)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
