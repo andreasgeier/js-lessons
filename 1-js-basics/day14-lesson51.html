@@ -10,6 +10,7 @@
         
         // Rezept für einen Gin Tonic
         let rezeptGinTonic = ['Gin', 'Tonic Water', 'Eis']
+        let rezeptWhiskeyCola = ['Whiskey', 'Cola', 'Eis']
 
         // Inhalt des Kühlschranks (inkl. Eisfach)
         let kuehlschrank = ['Gin', 'Cola', 'Apfelsaft', 'Tonic Water', 'Eis']
@@ -24,8 +25,7 @@
         console.log(istEisDa) // true
 
         // Barkeeper ist zu faul um 3x zu laufen und ruft seinem Assistenten
-        // einzeln die Zutaten zu...
-        // Assistent = Funktion 'sindZutatenDa' mit Parameter-Übergabe
+        // einzeln die Zutaten zu (Assistent = sindZutatenDa)...
         let sindZutatenDa = zutat => kuehlschrank.includes(zutat)
 
         console.log(sindZutatenDa('Gin')) // true
@@ -33,21 +33,16 @@
         console.log(sindZutatenDa('Eis')) // true
 
         // Barkeeper ist zu faul um jede Zutat einzeln durch die Bar zu 
-        // schreien und gibt Assistenten Zettel mit Rezept...
-        // Zettel = 'rezeptGinTonic'
+        // schreien und gibt dem Assistenten einen Zettel mit Rezept...
         let rezeptGinTonicCheck = rezeptGinTonic.every(sindZutatenDa)
 
         console.log(rezeptGinTonicCheck) // true
 
         // Barkeeper ist immer noch total faul und will diesen Ablauf für alle
         // Cocktails durchführen...
-        // Zettel = Funktion 'rezeptCheck'
         let rezeptCheck = rezept => rezept.every(sindZutatenDa)
 
         console.log(rezeptCheck(rezeptGinTonic)) // true
-
-        let rezeptWhiskeyCola = ['Whiskey', 'Cola', 'Eis']
-
         console.log(rezeptCheck(rezeptWhiskeyCola)) // false -> kein Whiskey da
 
     </script>
