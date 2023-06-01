@@ -71,6 +71,6 @@
 --- [Day 07](notes/day07.html): String-Methoden, Funktionen
 --- [Day 08](notes/day08.html): Funktionen
 --- [Day 09](notes/day09.html): Arrays und Array-Methoden
---- [Day 10](notes/day10.html): (Regex))
+--- [Day 10](notes/day10.html): (Regex)
 --- [Day 12](notes/day12.html): Schleifen for & while
 --- [Day 13](notes/day13.html): Callback Functions
