@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    'use strict'
+
+    // Rekursion: Funktion ruft sich selbst auf
+
+    const SECRET_NUMBER = 3
+    
+    let eingabe = () => {
+        let zahl = Number(prompt('Errate eine Zahl zwischen 1 und 5'))
+        if (SECRET_NUMBER === zahl) {
+            console.log('Zahl erraten: ' + zahl)
+            alert(`Du hast die Zahl ${SECRET_NUMBER} erraten!`)
+        } else if (isNaN(zahl)) {
+            console.log('Das ist keine Zahl: ' + zahl)
+            alert('Das ist keine Zahl!')
+            eingabe() // Rekursion
+        } else {
+            console.log('Zahl nicht erraten: ' + zahl)
+            alert(`Du hast die Zahl nicht erraten!`)
+            eingabe() // Rekursion
+        }
+    }
+
+    eingabe()
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
