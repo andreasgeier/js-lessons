@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Programmieren Sie ein Ratespiel mit folgenden Regeln: JS »denkt« 
+            sich eine Zahl zwischen 1 und 10 aus, die der Benutzer erraten 
+            muss. Der Benutzer gibt seine Vermutung in einer Prompt-Box ein, 
+            und eine Alert-Box teilt ihm mit, ob er
+                - zu hoch geraten hat,
+                - zu niedrig geraten hat,
+                - oder ob die Zahl richtig ist.
+            Errät der Benutzer die Zahl, so hat er gewonnen und das Spiel 
+            endet. Im anderen Fall fordert das Programm eine neue Schätzung an.
+        */
+
+        let rndmNbr = Math.ceil(Math.random() * 10)
+        console.log(rndmNbr)
+
+        let chckNbr = txt => {
+            let nbr = Number(prompt(txt))
+            if (isNaN(nbr)) return chckNbr('Eine Zahl wird gesucht, Stupid!\nGleich nochmal...')
+            if (nbr < 1 || nbr > 10) return chckNbr('Zwischen 1 und 10, Stupid!\nGleich nochmal...')
+            if (nbr < rndmNbr) return chckNbr(nbr + ' ist zu niedrig!\nGleich nochmal...')
+            if (nbr > rndmNbr) return chckNbr(nbr + ' ist zu hoch!\nGleich nochmal...')
+            return true
+        }
+
+        let usrNbr = chckNbr('Errate eine Zahl zwischen 1 und 10')
+
+        if (usrNbr === true) alert(`Du hast die Zahl ${rndmNbr} erraten!`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
