@@ -85,6 +85,7 @@
 --- [Day 12](notes/day12.html): Schleifen for & while
 --- [Day 13](notes/day13.html): Callback Functions
 --- [Day 15](notes/day15.html): Rekursion
+--- [Day 16](notes/day16.html): ASCII Art mit Rekursion
 
 <br>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // ASCII-Art
+        const multipleLines = (str, charCount, lineCount) => 
+            lineCount === 0 ? '' : 
+                multipleLines(str, charCount, lineCount - 1) // Rekursion
+                + drawLine(str, charCount)  // Aufruf Linienfunktion
+                + '\n' // Neue Zeile
+
+        const drawLine = (str, charCount) => 
+            charCount === 0 ? '' : 
+                drawLine(str, charCount - 1) // Rekursion
+                + str // Zeichen zurückgeben
+        
+        console.log(multipleLines('\\{~}/', 4, 6))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
