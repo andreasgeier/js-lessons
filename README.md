@@ -64,7 +64,7 @@
 
 ##### week 4
 
---- [Lesson 55](1-js-basics/day16-lesson55.html): Rekursion
+[Lesson 55](1-js-basics/day16-lesson55.html): Rekursion
 
 <br>
 
