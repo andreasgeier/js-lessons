@@ -158,12 +158,13 @@
             box-shadow: 0 0 0 .5rem black;
         }
         .dealers-area, .players-area {
+            position: relative;
             height: 50dvh;
             text-align: center;
         }
         p {
             position: absolute; 
-            top: 10vh; 
+            top: 6vh; 
             left: 50vw; 
             width: 80vw;
             transform: translate(-50%, -50%);
@@ -179,15 +180,84 @@
         p.hint {
             font-size: 1rem;
         }
-        #startscreen p, .players-area p {
+        #startscreen p {
+            position: absolute;
             top: 90vh
         }
+        .players-area p {
+            position: absolute;
+            top: 44vh
+        }
+        .cards {
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            bottom: 10vh;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .players-area .cards {
+            top: 10vh;
+            bottom: auto;
+        }
+        .card {
+            position: relative;
+            width: 20vh;
+            height: 28vh;
+            border: 1px solid black;
+            border-radius: .5rem;
+            background-color: white;
+            box-shadow: 1px 1px 8px rgba(0,0,0,.5);
+        }
+        .Hearts, .Diamonds { 
+            color: red;
+        }
+        .Clubs, .Spades { 
+            color: black;
+        }
+        .Clubs::before, .Spades::before, .Hearts::before, .Diamonds::before { 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: '♣';
+            font-size: 3rem;
+        }
+        .Spades::before { content:'♠' }
+        .Hearts::before { content:'♥' }
+        .Diamonds::before { content:'♦' }
+        .Ace::after, .King::after, .Queen::after, .Jack::after, 
+        ._2::after, _3::after, ._4::after, ._5::after, ._6::after, 
+        ._7::after, ._8::after, ._9::after, ._10::after {
+            position: absolute;
+            top: .5rem;
+            left: .75rem;
+            content: '';
+            font-size: 1.5rem; 
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+        .Ace::after { content: 'A' }
+        .King::after { content: 'K' }
+        .Queen::after { content: 'Q' }
+        .Jack::after { content: 'J' }
+        ._10::after { content: '10' }
+        ._9::after { content: '9' }
+        ._8::after { content: '8' }
+        ._7::after { content: '7' }
+        ._6::after { content: '6' }
+        ._5::after { content: '5' }
+        ._4::after { content: '4' }
+        ._3::after { content: '3' }
+        ._2::after { content: '2' }
     </style>
 </head>
 <body>
     <!-- Start -->
     <section id="startscreen" class="active">
-        <button onclick="startGame()">Play Blackjack</button>
+        <div class="button-area">
+            <button onclick="startGame()">Play Blackjack</button>
+        </div>
         <p class="hint">Hint: Open the DevTools Console to see what's going on behind the scenes.</p>
     </section>
 
@@ -195,10 +265,22 @@
     <section id="playground" class="">
         <div class="dealers-area">
             <p>Dealer</p>
+            <div class="cards">
+                <div class="card Ace of Hearts"></div>
+                <div class="card _4 of Spades"></div>
+            </div>
         </div>
         <div class="players-area">
-            <p>Player</p>
-        </div>    
+            <div class="cards">
+                <div class="card _10 of Clubs"></div>
+                <div class="card Jack of Diamonds"></div>
+            </div>
+        <p>Player</p>
+        </div>
+        <div class="button-area">
+            <button onclick="startGame()">Hit</button>    
+            <button onclick="startGame()">Stand</button>        
+        </div>
     </section>
 
     <script>
