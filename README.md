@@ -62,6 +62,10 @@
 --- [Lesson 53](1-js-basics/day14-lesson53.html): Sortieren nach Quersumme
 --- [Lesson 54](1-js-basics/day14-lesson54.html): Suchfilter
 
+##### week 4
+
+--- [Lesson 55](1-js-basics/day16-lesson55.html): Rekursion
+
 <br>
 
 ## notes
