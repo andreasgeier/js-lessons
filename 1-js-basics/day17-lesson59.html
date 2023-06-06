@@ -75,6 +75,13 @@
         console.log('--- Example 3 ---')
         console.log(isSorted(arr3))
 
+        // Lösung aus dem Script ist einfacher:
+        /*
+            const isSorted = list =>
+            list.length === 1 || (list[0] < list[1] && isSorted(list.slice(1)))
+
+            console.log(isSorted(array))
+        */
 </script>
 </head>
 <body>

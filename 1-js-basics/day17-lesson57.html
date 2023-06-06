@@ -22,13 +22,14 @@
             ***
         */
 
+        const drawLine = (char, count) => 
+            (count === 0) ? '' : char + drawLine(char, count - 1)
+
         const triangle = (char, count, reverse) => {
             if (count === 0) return ''
             if (reverse) return triangle(char, count - 1, reverse) + drawLine(char, count) + '\n'
             return drawLine(char, count) + '\n' + triangle(char, count - 1)
         }
-
-        const drawLine = (char, count) => (count === 0) ? '' : char + drawLine(char, count - 1)
 
         console.log(triangle('*', 4, true)) 
 

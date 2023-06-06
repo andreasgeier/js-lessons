@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Aufgabe: Gib 3x "Arrr!" mit der times Funktion in der Konsole aus
+        const times = (n, fn) => {
+            const array = Array(n).fill(0)
+            array.forEach((el, i, arr) => (arr[i] = fn(i)))
+            return array
+        }
+        times(3, () => console.log('Arrr!'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

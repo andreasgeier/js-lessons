@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Nachdem Sie nun mithilfe von times Linien zeichnen können, ist es 
+            höchste Zeit(!), sich wieder den Tapeten (Rechtecken) zuzuwenden. 
+            Schreiben Sie die Funktion rectangle (Codebeispiel 303) mithilfe 
+            von times so um, dass Sie keine Rekursion mehr benötigen.
+
+            const rectangle = (width, height, character) =>
+                height === 0
+                    ? ''
+                    : rectangle(width, height - 1, character) +
+                    '\n' +
+                    line(width, character)
+        */
+
+        const rectangle = (width, height, character) =>
+            times(height, () => line(width, character)).join('\n')
+
+        const line = (length, character) => times(length, () => character).join('')
+
+        const times = (n, fn) => {
+            const result = Array(n).fill(0)
+            result.forEach((x, i, r) => (r[i] = fn(i)))
+            return result
+        }
+
+        console.log(rectangle(4, 5, '^~/'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
