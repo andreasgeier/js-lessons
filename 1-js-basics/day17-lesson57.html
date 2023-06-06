@@ -28,10 +28,9 @@
             return drawLine(char, count) + '\n' + triangle(char, count - 1)
         }
 
-        const drawLine = (char, count) => 
-            (count === 0) ? '' : char + drawLine(char, count - 1)
+        const drawLine = (char, count) => (count === 0) ? '' : char + drawLine(char, count - 1)
 
-        console.log(triangle('*', 4, true))
+        console.log(triangle('*', 4, true)) 
 
     </script>
 </head>
