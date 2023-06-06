@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 59: Alles an seinem Platz? [»Kopfnuss«]
+
+            Die Anzeige der Chat-Teilnehmer, die gerade im NerdWorld-Chat 
+            online sind, soll Performance-optimiert werden. Die Liste soll nur 
+            noch neu sortiert werden, wenn sie noch nicht sortiert wurde.
+​
+            Schreiben Sie dafür eine Funktion isSorted, die prüft, ob ein Array 
+            von Teilnehmernamen bereits alphabetisch sortiert ist und in diesem 
+            Fall true, sonst false zurückgibt. Sie können dafür nicht auf die 
+            Funktion sort zurückgreifen, sonst würden Sie den 
+            Performancevorteil gleich wieder verlieren.
+
+            Tipp: Ein Array ist genau dann sortiert, wenn die ersten beiden 
+            Elemente der Liste in der richtigen Reihenfolge sind und die Liste 
+            ab dem zweiten Element sortiert ist. Ein Array mit nur einem 
+            Element ist immer sortiert.
+        */
+
+        const arrChk = arr => {
+            let checksum = []
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] < arr[i + 1]) {
+                    checksum.push(true)
+                } else {
+                    checksum.push(false)
+                }
+            }
+            console.log(arr)
+            console.log(checksum)
+            if (checksum.includes(false)) return false
+            if (checksum.includes(true)) return true
+        }
+
+        // check if array is sorted
+        const isSorted = arr => {
+            if (arr.length === 1) {
+                return true // sorted, if length is 1
+            }
+            if (arrChk(arr) === true) {
+                return true // sorted, if checksum is true
+            }
+            return false // else not sorted
+        }
+
+        // Examples to test the function
+        let arr1 = [
+            'Tom',
+        ]
+        console.log('--- Example 1 ---')
+        console.log(isSorted(arr1))
+
+        let arr2 = [
+            'Anton',
+            'Berta',
+            'Chris',
+        ]
+        console.log('--- Example 2 ---')
+        console.log(isSorted(arr2))
+
+        let arr3 = [
+            'Chris',
+            'Anton',
+            'Berta',
+        ]
+        console.log('--- Example 3 ---')
+        console.log(isSorted(arr3))
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
