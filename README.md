@@ -68,6 +68,9 @@
 --- [Lesson 56](1-js-basics/day16-lesson56.html): Rekursion 2
 --- [Lesson 57](1-js-basics/day17-lesson57.html): Rekursion 3: Dreiecke zeichnen
 --- [Lesson 58](1-js-basics/day17-lesson58.html): Rekursion 4: Runden zählen
+--- [Lesson 59](1-js-basics/day17-lesson59.html): Sortier-Prüfung
+--- [Lesson 60](1-js-basics/day17-lesson60.html): Timer
+--- [Lesson 61](1-js-basics/day17-lesson61.html): Timer 2
 
 <br>
 
@@ -88,7 +91,7 @@
 --- [Day 13](notes/day13.html): Callback Functions
 --- [Day 15](notes/day15.html): Rekursion
 --- [Day 16](notes/day16.html): ASCII Art mit Rekursion
---- [Day 17](notes/day17.html): Nochmal Rekursion
+--- [Day 17](notes/day17.html): Rekursion, Timer
 
 <br>
 
