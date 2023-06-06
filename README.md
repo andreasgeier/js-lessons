@@ -66,6 +66,8 @@
 
 [Lesson 55](1-js-basics/day16-lesson55.html): Rekursion
 --- [Lesson 56](1-js-basics/day16-lesson56.html): Rekursion 2
+--- [Lesson 57](1-js-basics/day17-lesson57.html): Rekursion 3: Dreiecke zeichnen
+--- [Lesson 58](1-js-basics/day17-lesson58.html): Rekursion 4: Runden zählen
 
 <br>
 
@@ -86,9 +88,11 @@
 --- [Day 13](notes/day13.html): Callback Functions
 --- [Day 15](notes/day15.html): Rekursion
 --- [Day 16](notes/day16.html): ASCII Art mit Rekursion
+--- [Day 17](notes/day17.html): Nochmal Rekursion
 
 <br>
 
 ## projects
 
 [Blackjack game](projects/blackjack.html): work in progress...
+
