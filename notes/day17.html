@@ -17,6 +17,31 @@
         } 
         countDown(10)
 
+        // Times Funktionen faken da nicht nativ in JS vorhanden
+
+        // Erzeugt array mit Anzahl Slots = N und füllt diese mit 0
+        // Array(n).fill(0)
+
+        const line = (length, char) => times(length, () => char).join('') 
+        const times = (n, fn) => {
+            let result = Array(n).fill(0)
+            result.forEach((el, i, arr) => (arr[i] = fn(i)))
+            return result
+        }
+        console.log(line(15, 'x'))
+
+        // Beispiel aus 23.2 als Rekursion
+        const line2 = (length, char) => times(length, () => char).join('')
+        const times2 = (n2, fn2) => (
+            n2 === 0 ? [] : times2(n2 - 1, fn2).concat(fn2(n2 - 1))
+        )
+        console.log(line2(15, '-'))
+
+        // Anderes times Beispiel:
+        const loop = (times, callback) => {
+            Array(times).fill(0).forEach((item, i) => callback(i));
+        };
+        loop(7, i => console.log('Day ' + (i + 1) + ' of the week'))
 
     </script>
 </head>
