@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Baue ein Dreieck
+            Ob von oben nach unten oder unten nach oben, bleibt Ihnen 
+            überlassen. Falls Sie beide Fälle entwickeln, dürfen Sie sich ein 
+            Fleißsternchen in Ihr Hausaufgabenheft malen :)
+            Die Funktion triangle sollte nur einen Parameter haben, der sowohl 
+            Höhe als auch Breite des Dreiecks bestimmt. So sollte 
+            beispielsweise triangle(3) ein Dreieck mit einer Höhe und Breite 
+            von 3 Zeichen erzeugen.
+            z.B.
+            *
+            **
+            ***
+        */
+
+        const triangle = (char, count, reverse) => {
+            if (count === 0) return ''
+            if (reverse) return triangle(char, count - 1, reverse) + drawLine(char, count) + '\n'
+            return drawLine(char, count) + '\n' + triangle(char, count - 1)
+        }
+
+        const drawLine = (char, count) => 
+            (count === 0) ? '' : char + drawLine(char, count - 1)
+
+        console.log(triangle('*', 4, true))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
