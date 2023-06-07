@@ -71,6 +71,8 @@
 --- [Lesson 59](1-js-basics/day17-lesson59.html): Sortier-Prüfung
 --- [Lesson 60](1-js-basics/day17-lesson60.html): Timer
 --- [Lesson 61](1-js-basics/day17-lesson61.html): Timer 2
+--- [Lesson 62](1-js-basics/day17-lesson62.html): Führende Nullen ergänzen
+--- [Lesson 63](1-js-basics/day17-lesson63.html): Zahlreihen erzeugen
 
 <br>
 
@@ -91,7 +93,8 @@
 --- [Day 13](notes/day13.html): Callback Functions
 --- [Day 15](notes/day15.html): Rekursion
 --- [Day 16](notes/day16.html): ASCII Art mit Rekursion
---- [Day 17](notes/day17.html): Rekursion, Timer
+--- [Day 17](notes/day17.html): Rekursion
+--- [Day 18](notes/day18.html): times(), range()
 
 <br>
 
