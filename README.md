@@ -71,8 +71,8 @@
 --- [Lesson 59](1-js-basics/day17-lesson59.html): Sortier-Prüfung
 --- [Lesson 60](1-js-basics/day17-lesson60.html): Timer
 --- [Lesson 61](1-js-basics/day17-lesson61.html): Timer 2
---- [Lesson 62](1-js-basics/day17-lesson62.html): Führende Nullen ergänzen
---- [Lesson 63](1-js-basics/day17-lesson63.html): Zahlreihen erzeugen
+--- [Lesson 62](1-js-basics/day18-lesson62.html): Führende Nullen ergänzen
+--- [Lesson 63](1-js-basics/day18-lesson63.html): Zahlreihen erzeugen
 
 <br>
 
