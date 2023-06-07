@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            NerdWorld hat sein Artikelnummer-Konzept noch einmal geändert. Es 
+            werden jetzt stets 7-stellige Artikelnummern verwendet. Nummern, 
+            die weniger als 7 Stellen haben — wie z.B. 123 — sollen durch 
+            führende Nullen auf sieben Stellen aufgefüllt werden. 
+            Beispielsweise wird 123 dann in 0000123 korrigiert. Schreiben Sie 
+            eine Funktion, die eine Artikelnummer entgegennimmt und die 
+            korrigierte Fassung als String zurückgibt.
+
+            Experimentieren Sie: Versuchen Sie, die Übung mal mit times, mal 
+            mit Rekursion und auch mal ganz ohne Rekursion oder times zu lösen.
+        */
+
+        // Hilfsfunktion times
+        const times = (n, fn) => 
+            Array(n).fill(0).forEach((x, i, r) => (r[i] = fn(i)))
+
+        // Artikel IDs, noch nicht nach Regel formatiert
+        const artikelListe = [1, 12, 123, 1234567]
+
+        // ---------------------------------------------------------------------
+        // Lösung 1 (plain)
+
+        // 'gibMirNullen' liefert string mit Nullen
+        const gibMirNullen = delta => Array(delta).fill(0).join('')
+
+        // 'neueNummern' liefert korrigiertes array zurück
+        const neueNummern = (arr, lengthOfNr) => {
+            let result = []
+            arr.forEach(el => {
+                let delta = lengthOfNr - el.toString().length
+                if (delta <= 0) result.push(el.toString())
+                if (delta > 0) result.push(gibMirNullen(delta) + el)
+            }) 
+            return result
+        }
+
+        console.log(neueNummern(artikelListe, 7))
+
+        // ---------------------------------------------------------------------
+        // Lösung 2 (Rekursion)
+
+        // rufe fn solange auf, bis string länge n an
+        // füge jedesmal eine null hinzu
+
+        // 'rekursionNuller' liefert string mit Nullen
+        const rekursionNuller = delta => 
+            (delta === 0) ? '' : ''.concat('0') + rekursionNuller(delta - 1)
+
+        const rekursionArtikel = (arr, lengthOfNr) =>
+            arr.map(el => ((rekursionNuller(lengthOfNr) + el).slice(-lengthOfNr)))
+
+        console.log(rekursionArtikel(artikelListe, 7))
+
+        // ---------------------------------------------------------------------
+        // Lösung 3 (Einzeiler!)
+
+        const fixNumber = (arr, lengthOfNr) =>
+            arr.map(el => 
+                (Array(lengthOfNr).fill(0).join('') + el).slice(-lengthOfNr)
+            )
+
+        console.log(fixNumber(artikelListe, 7))
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
