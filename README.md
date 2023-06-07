@@ -73,6 +73,7 @@
 --- [Lesson 61](1-js-basics/day17-lesson61.html): Timer 2
 --- [Lesson 62](1-js-basics/day18-lesson62.html): Führende Nullen ergänzen
 --- [Lesson 63](1-js-basics/day18-lesson63.html): Zahlreihen erzeugen
+--- [Lesson 64](1-js-basics/day18-lesson64.html): Lotto-Ziehung
 
 <br>
 
