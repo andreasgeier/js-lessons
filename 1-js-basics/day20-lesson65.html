@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 65: Primzahlen
+            Schreiben Sie ein Programm, das alle Primzahlen ermittelt und im 
+            Browser ausgibt. Eine Primzahl ist eine ganze Zahl größer 1, die — 
+            ohne Rest — nur durch sich selbst oder 1 teilbar ist.
+
+            1. Geben Sie die Primzahlen von 1 bis 97 (inkl.) aus.
+        */
+
+        // zahl größer 1 && nur durch sich selbst teilbar ohne rest
+        // erzeuge zahl
+            // prüfe, ob teilbar mit rest 0
+            // wenn ja, push to array
+
+
+        const isPrimeNbr = nbr => {
+            let primeCheck = []
+            if (nbr <= 1) primeCheck.push(false)
+            if (nbr === 2) primeCheck.push(true)
+            for (let i = 2; i < nbr; i++) {
+                if  (nbr % i !== 0) {
+                    primeCheck.push(true)
+                } else {
+                    primeCheck.push(false)
+                }
+            }
+            if (primeCheck.includes(false)) {
+                return false 
+            } else {
+                return true    
+            } 
+        }
+
+        const createSeriesOfPrimes = (start, end) => {
+            const range = end - start
+            let primes = []
+            
+            for (let i = 0; i < range; i++) {
+                let counter = i + 1
+                if (isPrimeNbr(counter) === true) {
+                    primes.push(counter)
+                }
+            }
+
+            return primes
+        }
+
+        console.log(isPrimeNbr(5)) // true
+        console.log(createSeriesOfPrimes(0, 100)) // 2, 3, 5, 7, 11, 13 ...
+
+        // Lösung aus 23.5 (setzt range voraus)
+        /*
+        const primesUpTo = n => range(2, n + 1).filter(isPrime)
+        const isPrime = n => range(2, n).every(divider => !divisible(n, divider))
+        const divisible = (n, divider) => n % divider === 0
+
+        console.log(primesUpTo(97)) 
+        */ 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

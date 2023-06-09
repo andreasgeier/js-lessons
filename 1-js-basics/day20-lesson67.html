@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // HILFSFUNKTIONEN 
+
+        // times
+        const times = (n, fn) => {
+            const result = Array(n).fill(0)
+            result.forEach((x, i, r) => (r[i] = fn(i)))
+            return result
+        }
+
+        // range
+        const rangeFromStartToEnd = (start, end, step = 1) => {
+            const length = Math.max(Math.ceil((end - start) / step), 0)
+            const result = Array(length).fill(0)
+            result.forEach((x, i, r) => (r[i] = start + i * step))
+            return result
+        }
+
+        const range = (startOrEnd, end, step) =>
+            end
+                ? rangeFromStartToEnd(startOrEnd, end, step)
+                : rangeFromStartToEnd(0, startOrEnd)
+
+        /*
+            AUFGABE 67: Lottostatistik [»Kopfnuss«]
+            Jetzt wollen wir es wissen. Wie oft hat man denn wirklich 6 
+            Richtige? Schreiben Sie ein Programm, das an 10.000 Lottoziehungen 
+            teilnimmt — immer mit den gleichen Zahlen. Geben Sie anschließend 
+            eine Statistik aus, wie oft 6 Richtige, 5 Richtige, usw. erreicht 
+            wurden.
+        */
+
+        // (Lösung ist kopiert)
+        
+        const MAX_NUMBER = 49
+        const NUMBER_OF_PLAYS = 10000
+        const MY_GUESS = [2, 12, 19, 21, 42, 43]
+
+        const lottoStats = () =>
+            range(NUMBER_OF_PLAYS)
+                .map(() => numberOfHits(play(), MY_GUESS))
+                .reduce(
+                    (stats, numHits) => {
+                        stats[numHits] += 1
+                        return stats
+                    },
+                    [0, 0, 0, 0, 0, 0],
+                )
+
+        const numberOfHits = (draw, guess) => intersection(draw, guess).length
+
+        const intersection = (a, b) => a.filter(v => b.includes(v))
+
+        const play = () => lottoNumbers(6, allLottoNumbers())
+        const allLottoNumbers = () => range(1, MAX_NUMBER + 1)
+
+        const lottoNumbers = (count, remainingLottoNumbers) =>
+            times(count, () => pickRandomLottoNumber(remainingLottoNumbers))
+
+        const pickRandomLottoNumber = remainingLottoNumbers =>
+            remainingLottoNumbers.splice(
+                randomNumberTo(remainingLottoNumbers.length),
+                1,
+            )[0]
+
+        const randomNumberTo = n => Math.floor(Math.random() * n)
+
+        console.log(lottoStats())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

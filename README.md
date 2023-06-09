@@ -74,6 +74,9 @@
 --- [Lesson 62](1-js-basics/day18-lesson62.html): Führende Nullen ergänzen
 --- [Lesson 63](1-js-basics/day18-lesson63.html): Zahlreihen erzeugen
 --- [Lesson 64](1-js-basics/day18-lesson64.html): Lotto-Ziehung
+--- [Lesson 65](1-js-basics/day20-lesson65.html): Primzahlen
+--- [Lesson 66](1-js-basics/day20-lesson66.html): Perfekte Zahlen
+--- [Lesson 67](1-js-basics/day20-lesson67.html): Lotto-Statistik
 
 <br>
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // (Lösung ist kopiert!)
+        
+        const perfectNumbersUpTo = n => range(n + 1).filter(isPerfect)
+        const isPerfect = n => sum(dividersOf(n)) === n
+        const dividersOf = n => range(n).filter(divider => divisible(n, divider))
+        const sum = ns => ns.reduce(add, 0)
+        const divisible = (n, divider) => n % divider === 0
+        const add = (a, b) => a + b
+
+        const range = (startOrEnd, end, step) =>
+            end
+                ? rangeFromStartToEnd(startOrEnd, end, step)
+                : rangeFromStartToEnd(0, startOrEnd)
+
+        const rangeFromStartToEnd = (start, end, step = 1) => {
+            const length = Math.max(Math.ceil((end - start) / step), 0)
+            const result = Array(length).fill(0)
+            result.forEach((x, i, r) => (r[i] = start + i * step))
+            return result
+        }
+
+        console.log(perfectNumbersUpTo(1000))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
