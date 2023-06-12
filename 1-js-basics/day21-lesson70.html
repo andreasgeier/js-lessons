@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Wissen Sie, wie Bücher weltweit identifiziert werden? Dazu gibt es 
+            die ISBN, die International Standard Book Number. Nehmen Sie 
+            einfach mal ein Buch aus Ihrem Bücherregal und drehen Sie es um. 
+            Auf der Rückseite — da steht sie, die ISBN.
+
+            Seit 2007 wird nur noch die ISBN-13 verwendet, d.h. eine ISBN, die 
+            aus 13 Ziffern besteht. Interessant ist dabei vor allem, dass die 
+            letzte Ziffer eine sogenannte Prüfziffer ist. Sie lässt sich aus 
+            den anderen 12 Ziffern berechnen. Dadurch können Sie recht einfach 
+            feststellen, ob es sich bei einer 13-stelligen Zahl tatsächlich um 
+            eine gültige ISBN handelt oder nicht.
+
+            1. Schreiben Sie eine Funktion, die zu einer 12-stelligen Zahl wie 
+            beispielsweise 978151705411 die ISBN-Prüfziffer (hier: 3) berechnet.
+
+            Wie genau funktioniert die Berechnung der Prüfziffer? Hier der 
+            Algorithmus:
+
+            Bilden Sie die Summe der einzelnen Ziffern, wobei Sie jede zweite 
+            Ziffer mit 3 multiplizieren. Beispiel anhand der 4-stelligen Zahl 
+            4567 => 4 + 5 * 3 + 6 + 7 * 3 => 46
+            Vom Ergebnis dieser Berechnung verwenden Sie nur die letzte Ziffer 
+            und subtrahieren sie von 10. Beispiel:
+            4567 => 46 => 6 => 10 - 6 => 4
+            Falls das Ergebnis 10 ist, ersetzen Sie es durch 0.
+            
+            2. Achten Sie darauf, dass Ihr Programm mit einer beliebigen Anzahl 
+            von Stellen (nicht nur genau 12) umgehen kann.
+            
+            3. Erlauben Sie auch die Angabe einer ISBN mit Bindestrichen, wie 
+            z.B. in 978-3-86680-192-9
+        */
+
+        const checkDigit = isbn => {
+            const sum = isbn
+                .split('') // ISBN als Array
+                .map(Number) // Strings in Numbers umwandeln
+                .filter(el => !isNaN(el)) // Nicht-Zahlen löschen
+                .map((el, i, arr) => (i % 2 === 0) ? el : el * 3) // jede zweite Zahl mit 3 multiplizieren
+                .reduce((a, b) => a + b) // Array auf Summe reduzieren
+
+            const digit = (10 - sum
+                    .toString() // Summe in String umwandeln
+                    .slice(-1) // Letzte Zahl des Strings ausgeben
+                )
+                .toString() // Ergebnis dieser Berechnung in String umwandeln
+                .slice(-1) // Letzte Zahl des Strings ausgeben, um Ergebnis 10 zu vermeiden
+
+            console.log('ISBN: ' + isbn)
+            console.log('Quersumme: ' + sum)
+            console.log('Prüfziffer: ' + digit)
+
+            return digit
+        }
+        
+        console.log(checkDigit('1234-56-7897'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
