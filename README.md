@@ -78,6 +78,12 @@
 --- [Lesson 66](1-js-basics/day20-lesson66.html): Perfekte Zahlen
 --- [Lesson 67](1-js-basics/day20-lesson67.html): Lotto-Statistik
 
+##### week 5
+
+[Lesson 68](1-js-basics/day21-lesson68.html): Gewinnerplätze 1 bis 3
+--- [Lesson 69](1-js-basics/day21-lesson69.html): Auf der Mauer, auf der Lauer...
+--- [Lesson 70](1-js-basics/day21-lesson70.html): ISBN Prüfsumme
+
 <br>
 
 ## notes
