@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 69: Der Buchstabendieb
+
+            Bei dem deutschen Kinderlied Auf der Mauer, auf der Lauer singen Sie 
+            in jeder neuen Strophe bei den Wörtern Wanze und tanzen immer einen 
+            Buchstaben weniger, bis nichts mehr vom jeweiligen Wort übrig ist.
+
+            Schreiben Sie eine Funktion, der Sie ein beliebiges Wort übergeben 
+            können. Sie soll ein Array zurückliefern, bei dem jedes Element ein 
+            Teil des Wortes ist, sodass von Element zu Element immer ein 
+            Buchstabe verloren geht. Das letzte Element im Array muss immer ein 
+            leerer String sein.
+        */
+
+        const kuerzDasWort = wort => 
+            wort
+                .split('')
+                .map((el, i , arr) => arr.join('').slice(0, i))
+                // alternativ:    
+                // .map((el, i) => wort.slice(0, i))
+                .reverse()
+
+        console.log(kuerzDasWort('tanzen'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
