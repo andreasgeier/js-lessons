@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Gewinner-Liste erzeugen mit Callback-Funktion der 
+        // Higher-Order-Funktion
+        let teilnehmer = ['Tim', 'Anna', 'Paul', 'John', 'Felix']
+
+        const platzierung = arr => 
+            arr.map((el, i) => 
+                (i < 3) 
+                ? `Platz ${i + 1}: ${el}`
+                : el
+            ).join('\n')
+
+        console.log(platzierung(teilnehmer))
+        
+        // In englisch mit enstprechender Notierung 1st, 2nd, 3rd
+        const winners = arr => 
+            arr.map((el, i) => {
+                if (i === 0) return `${i + 1}st place: ${el}` 
+                if (i === 1) return `${i + 1}nd place: ${el}`
+                if (i === 2) return `${i + 1}rd place: ${el}`
+                return el 
+            }
+            ).join('\n')
+
+        console.log(winners(teilnehmer))
+
+        // Dasselbe, aber mit verschachtelten if statements
+        const winners2 = arr => 
+            arr.map((el, i) => 
+                (i < 3)
+                ? `${i + 1}${
+                    (i === 0) ? 'st' : ''}${
+                    (i === 1) ? 'nd' : ''}${
+                    (i === 2) ? 'rd' : ''} place: ${el}`
+                : el
+            ).join('\n')
+
+        console.log(winners2(teilnehmer))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
