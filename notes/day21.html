@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // rest Parameter
+        const zuTisch = (aufruf, ...namen) => 
+            namen.forEach(name => console.log(aufruf + ', ' + name + '!'))
+
+        zuTisch('Essen fertig', 'Emmi', 'Milo', 'Jakob')
+
+        // Schach mit 2-dimensionalem Array
+        // Y-Achse zuerst: a1 = [7][0], b2 = [6][1]
+        const boardAtStart = () => [
+            ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'], // 8=[0]
+            ['♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'], // 2=[6]
+            ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'], // 1=[7]
+         // a=[0] b=[1] c=[2] ...
+        ]
+        const boardEmpty = () => [
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+        ]
+
+        const boardToString = arr => arr
+            .map(row => row.join(''))
+            .join('\n')
+
+        const moveStart = str => str.substring(0, 2)
+        const moveTarget = str => str.substring(2)
+
+        const index123 = str => 8 - str.charAt(1) // 123...
+        const indexABC = str => 'abcdefgh'.search(str.charAt(str)) // abc...
+
+
+        
+        // --------------------------------------------------------------------
+        // Das Spiel beginnt...
+        console.log(boardToString(boardAtStart))
+
+        let move = 'b1c3' 
+
+        console.log('Zug: ' + move)
+        console.log('Start: ' + moveStart(move))
+        console.log('Startindex (1st arr): ' + index123(moveStart(move))) 
+        console.log('Startindex (2st arr): ' + indexABC(moveStart(move))) 
+        console.log('Startfeld: ' 
+            + boardAtStart
+            [index123(moveStart(move))][indexABC(moveStart(move))])
+
+        console.log('Ziel: ' + moveTarget(move))
+        console.log('Zielindex (1st arr): ' + index123(moveTarget(move))) 
+        console.log('Zielindex (2st arr): ' + indexABC(moveTarget(move))) 
+        console.log('Zielfeld: ' 
+            + boardAtStart
+            [index123(moveTarget(move))][indexABC(moveTarget(move))])
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
