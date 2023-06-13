@@ -70,7 +70,7 @@
         const index123 = str => 8 - str.charAt(1) // 123...
         const indexABC = str => 'abcdefgh'.search(str.charAt(str)) // abc...
 
-        // Zug ausführen
+        // Einzelnen Zug ausführen
         const moveChessPiece = (move, board) => {
             let startX = indexABC(moveStart(move))
             let startY = index123(moveStart(move))
@@ -89,18 +89,24 @@
             return board
         }
         
-        const moves = (arr, i) => arr.reduce(moveChessPiece(i, board)) 
+        // Mehrere Züge ausführen
+        const moves = arr => {
+            for (let i = 0; i < arr.length; i++) {
+                moveChessPiece(arr[i], board)
+            } 
+        }
 
         // --------------------------------------------------------------------
         // Das Spiel beginnt...
         let board = boardAtStart
 
-        moveChessPiece('d2d4', board)
-        moveChessPiece('a7a5', board)
-        moveChessPiece('g1f3', board) 
+        // Einzelne Züge:
+        // moveChessPiece('d2d4', board)
+        // moveChessPiece('a7a5', board)
+        // moveChessPiece('g1f3', board) 
 
-        // noch buggy:
-        // moves(['d2d4', 'a7a5', 'g1f3'])
+        // Aufuf mit mehreren Zügen:
+        moves(['d2d4', 'a7a5', 'g1f3'])
 
         </script>
 </head>
