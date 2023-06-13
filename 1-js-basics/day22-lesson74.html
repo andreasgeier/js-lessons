@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 74: Pokémon — Evolution
+
+            Kennen Sie Pokémon? Allen Pokémon-Spielen ist gemein, dass es 
+            Pokémon (Phantasiewesen) gibt, die über verschiedene 
+            Evolutionsstufen verfügen. Ein Pokémon kann sich bis zu zweimal 
+            weiterentwickeln. D.h. es gibt maximal drei Stufen: seine 
+            Anfangsstufe und bis zu zwei Folgestufen. Jede dieser Stufen trägt 
+            einen neuen Pokémon-Namen — keiner dieser Namen kann doppelt 
+            vorkommen. Einen guten Überblick über die Stufen bei Pokémon GO 
+            finden Sie auf http://www.pokemongoevolution.com.
+
+            1. Schreiben Sie eine Funktion stagesFor, der Sie eine Pokémon-
+            Evolutionsstufe übergeben und die Ihnen alle dazugehörigen 
+            Evolutionsstufen als Array zurückliefert. Als Daten verwenden Sie 
+            exemplarisch die Evolutionsstufen von Pidgey, Vulpix und Dratini.
+
+            2. Entwickeln Sie die Funktionen stagesAfter und stagesBefore, die 
+            Ihnen nur die Stufen vor bzw. nach der angefragten Stufe 
+            zurückliefern.
+        */
+
+        const evolutionStages = [
+            ['Pidgey', 'Pidgeotto', 'Pidgeot'],
+            ['Vulpix', 'Ninetales'],
+            ['Dratini', 'Dragonair', 'Dragonite']
+        ]
+
+        const stagesFor = pokemon => {
+            let match = evolutionStages.find(
+                el => el[0] === pokemon
+            )
+            return match
+        }
+
+        const stagesAfter = pokemon => {
+            let arrFound = evolutionStages.find(
+                    el => el.find(
+                        el => el === pokemon
+                    )
+                )
+            const indexFound = arrFound.indexOf(pokemon)
+            return arrFound.slice(indexFound + 1)
+        }
+
+        const stagesBefore = pokemon => {
+            let arrFound = evolutionStages.find(
+                    el => el.find(
+                        el => el === pokemon
+                    )
+                )
+            const indexFound = arrFound.indexOf(pokemon)
+            return arrFound.slice(0, indexFound)
+        }
+
+        console.log(stagesFor('Vulpix')) // => [ 'Vulpix', 'Ninetales' ]
+        console.log(stagesAfter('Dratini')) // => [ 'Dragonair', 'Dragonite' ]
+        console.log(stagesBefore('Pidgeot')) // => [ 'Pidgey', 'Pidgeotto' ]
+        console.log(stagesBefore('Dragonair')) // => [ 'Dratini' ]
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
