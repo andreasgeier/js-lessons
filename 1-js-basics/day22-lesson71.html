@@ -90,11 +90,7 @@
         }
         
         // Mehrere Züge ausführen
-        const moves = arr => {
-            for (let i = 0; i < arr.length; i++) {
-                moveChessPiece(arr[i], board)
-            } 
-        }
+        const moves = arr => arr.map(x => moveChessPiece(x, board))
 
         // --------------------------------------------------------------------
         // Das Spiel beginnt...
