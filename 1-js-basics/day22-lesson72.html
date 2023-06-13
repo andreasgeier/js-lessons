@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 72: Geoquiz
+            Eine Schule gibt die Entwicklung eines Geoquiz in Auftrag, bei dem 
+            Schüler die Hauptstädte verschiedener Staaten nennen müssen. Ihre 
+            Aufgabe besteht in der Entwicklung der Lösungsfunktion capitalOf, 
+            die eine Hauptstadt zum übergebenen Staat (country) zurückliefert.​
+        */
+
+        const countriesWithCapital = [
+            ['UK', 'London'],
+            ['France', 'Paris'],
+            ['Germany', 'Berlin'],
+            ['Switzerland', 'Bern'],
+            ['Austria', 'Vienna'],
+            ['Russia', 'Moscow']
+        ]
+
+        const capitalOf = country => {
+            let capital = countriesWithCapital.find(
+                el => el[0] === country
+            )[1]
+            return capital
+        }
+
+        console.log(capitalOf('UK'))
+        console.log(capitalOf('Germany'))
+        console.log(capitalOf('Austria'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
