@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 73: Geoquiz — Teil 2
+            In der erweiterten Ausbaustufe sollen die Schüler den Staat zu 
+            einer Hauptstadt nennen. Ihre Aufgabe ist es erneut, eine 
+            Lösungsfunktion zu programmieren. Dieses Mal nimmt 
+            countryForCapital eine Hauptstadt (capital) entgegen und liefert 
+            den zugehörigen Staat zurück.
+
+            Die Funktion soll auf die bestehende Konstante countriesWithCapital 
+            zugreifen. Es ist nicht erlaubt, die Struktur der Daten in der 
+            Konstante zu ändern.
+        */
+
+        const countriesWithCapital = [
+            ['UK', 'London'],
+            ['France', 'Paris'],
+            ['Germany', 'Berlin'],
+            ['Switzerland', 'Bern'],
+            ['Austria', 'Vienna'],
+            ['Russia', 'Moscow']
+        ]
+
+        const capitalOf = country => {
+            let capital = countriesWithCapital.find(
+                el => el[0] === country
+            )[1]
+            return capital
+        }
+
+        console.log(capitalOf('UK'))
+        console.log(capitalOf('Germany'))
+        console.log(capitalOf('Austria'))
+
+        const countryForCapital = capital => {
+            let country = countriesWithCapital.find(
+                el => el[1] === capital
+            )[0]
+            return country
+        }
+
+        console.log(countryForCapital('London'))
+        console.log(countryForCapital('Berlin'))
+        console.log(countryForCapital('Moscow'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
