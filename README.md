@@ -83,6 +83,11 @@
 [Lesson 68](1-js-basics/day21-lesson68.html): Gewinnerplätze 1 bis 3
 --- [Lesson 69](1-js-basics/day21-lesson69.html): Auf der Mauer, auf der Lauer...
 --- [Lesson 70](1-js-basics/day21-lesson70.html): ISBN Prüfsumme
+--- [Lesson 71](1-js-basics/day22-lesson71.html): Schachzüge
+--- [Lesson 72](1-js-basics/day22-lesson72.html): Geo-Quiz
+--- [Lesson 73](1-js-basics/day22-lesson73.html): Geo-Quiz 2
+--- [Lesson 74](1-js-basics/day22-lesson74.html): Pokemon
+--- [Lesson 75](1-js-basics/day22-lesson75.html): Cocktails mixen
 
 <br>
 
