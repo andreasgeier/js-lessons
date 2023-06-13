@@ -105,7 +105,8 @@
 --- [Day 16](notes/day16.html): Rekursion 2: ASCII Art
 --- [Day 17](notes/day17.html): Rekursion 3
 --- [Day 18](notes/day18.html): times(), range()
---- [Day 21](notes/day21.html): rest-Parameter, multidimensionales Array
+--- [Day 21](notes/day21.html): rest-Parameter
+--- [Day 22](notes/day22.html): Schachbrett als multidimensionales Array
 
 <br>
 
