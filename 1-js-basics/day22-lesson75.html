@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Cocktail-Rezepte
+        const ginTonic = ['Gin', 'Tonic Water', 'Limette', 'Eis']
+        const whiskeyCola = ['Whiskey', 'Cola', 'Eis']
+        const martini = ['Gin', 'Wermut', 'Olive']
+        const tequilaSunrise = ['Tequila', 'Orangensaft', 'Grenadine']
+        
+        const rezepte = [ginTonic, whiskeyCola, martini, tequilaSunrise]
+        
+        // Inhalt der Bar
+        let bar = [
+            'Gin', 'Tonic Water', 'Limette', 'Eis', 'Whiskey', 'Cola', 
+            'Wermut', 'Olive', 'Tequila', 'Orangensaft', 'Grenadine', 'Rum', 
+            'Aperol', 'Sekt'
+        ]
+
+        // Prüft, ob Zutaten für Rezept vorhanden
+        const zutatenDa = rezept => 
+            rezept.every(zutat => bar.includes(zutat))
+
+        // Prüfe, welche Rezepte mit dem Inhalt der Bar gemixt werden können
+        const wasKannIchMixen = () => 
+            rezepte.filter(rezept => zutatenDa(rezept))
+
+        // Ausgabe als Array
+        console.log(wasKannIchMixen())
+
+        // Ausgabe als String, reduziert auf erstes gefundenes Rezept
+        console.log(
+            'Mit dem Inhalt der Bar lässt sich folgendes Rezept mixen:\n' 
+            + wasKannIchMixen()[0].join(', ')
+        )
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
