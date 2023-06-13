@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*  
+            Schach mit 2-dimensionalem Array
+            --------------------------------
+
+            arr1     Schachbrett
+
+            [0]      a8  b8  c8  d8  e8  f8  g8  h8
+            [1]      a7  b7  c7  d7  e7  f7  g7  h7
+            [2]      a6  b6  c6  d6  e6  f6  g6  h6
+            [3]      a5  b5  c5  d5  e5  f5  g5  h5
+            [4]      a4  b4  c4  d4  e4  f4  g4  h4
+            [5]      a3  b3  c3  d3  e3  f3  g3  h3
+            [6]      a2  b2  c2  d2  e2  f2  g2  h2
+            [7]      a1  b1  c1  d1  e1  f1  g1  h1
+
+                    [0] [1] [2] [3] [4] [5] [6] [7]  arr2
+
+
+            Ablauf in Pseudo-Code
+            ---------------------
+
+            Trenne Zug z.B. 'e2e4' in Start 'e2' und Ziel 'e4'
+            Trenne Start & Ziel jeweils in Achse X & Y, z.B. 'e2' in 'e' und '2'
+            Übersetze X & Y in Array-Index, z.B. 'e' in [4] und '2' in [6]
+            Erzeuge Position in zweidimensionalem Array, z.B. 'e2' wird [6][4]
+            Benutze diese Positionsangaben für Züge
+                Ersetze Zielfeld mit Figur von Startfeld
+                Ersetze Startfeld mit Feld aus leerem Schachbrett
+        */ 
+
+        const boardAtStart = [
+            ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'],
+            ['♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙'],
+            ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'],
+        ]
+        const boardEmpty = [
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+            ['◻', '▦', '◻', '▦', '◻', '▦', '◻', '▦'],
+            ['▦', '◻', '▦', '◻', '▦', '◻', '▦', '◻'],
+        ]
+
+        // Schachbrett in String umwandeln für Ausgabe
+        const boardToString = arr => arr
+            .map(row => row.join(''))
+            .join('\n')
+
+        // Spielzug in Start- und Zielfeld zerlegen
+        const moveStart = str => str.substring(0, 2)
+        const moveTarget = str => str.substring(2)
+
+        // Feld in Array-Index übersetzen
+        const index123 = str => 8 - str.charAt(1) // 123...
+        const indexABC = str => 'abcdefgh'.search(str.charAt(str)) // abc...
+
+        // Zug ausführen
+        const moveChessPiece = (move, board) => {
+            let startX = indexABC(moveStart(move))
+            let startY = index123(moveStart(move))
+            let targetX = indexABC(moveTarget(move))
+            let targetY = index123(moveTarget(move))
+
+            // Zielfeld mit Startfeld befüllen
+            board[targetY][targetX] = board[startY][startX]
+            // Startfeld leeren
+            board[startY][startX] = boardEmpty[startY][startX]
+
+            console.log('------------------')
+            console.log('Zug: ' + move)
+            console.log(boardToString(board))
+
+            return board
+        }
+        
+        // --------------------------------------------------------------------
+        // Das Spiel beginnt...
+        let board = boardAtStart
+
+        moveChessPiece('d2d4', board)
+        moveChessPiece('a7a5', board)
+        moveChessPiece('g1f3', board) 
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
