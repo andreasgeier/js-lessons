@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // Array
+        let customer = ['Anna', 'Maier', 'Unter den Linden 17, Berlin']
+
+        console.log(customer[1])
+
+        // Objekt (key: value)
+        let customer2 = {
+            vorname: 'Anna',
+            nachname: 'Maier',
+            adresse: 'Unter den Linden 17, Berlin'
+        }
+
+        // Punktsyntax
+        console.log(customer2.nachname)
+
+        // Alternative Klammernschreibweise
+        console.log(customer2['nachname']) 
+
+        // Verschiedene Ausgabeformen in der Console
+        console.log(customer2)
+        console.dir(customer2)
+        console.table(customer2)
+
+        // Werte zuweisen und auslesen
+        let product = {
+            name: 'Toaster',
+            price: 19.99,
+            count: 7
+        }
+        console.log(product) 
+
+        product.price = 17.99
+        product.count = 6
+        console.log(product) 
+
+        // Zuweisung über Variable braucht Klammernschreibweise
+        let newProductName = 'name'
+        product[newProductName] = 'Weltbester Toaster'
+        console.log(product)
+
+        // Nachträgliches Hinzufügen von Properties
+        product.description = 'Ein wirklich tolles Gerät'
+        console.log(product)
+
+        // Leeres Objekt anlegen
+        let myObj = {}
+        myObj.prop1 = 'Anton'
+        myObj.prop2 = 'Sonnenschein'
+        console.log(myObj)
+
+        // Produkt mit array
+        let someProduct = {
+            name: 'Toaster',
+            category: ['Haushalt', 'Technik', 'Angebote'],
+            price: 19
+        }
+
+        // Array mit Objekten
+        let someProducts = [ 
+            {
+                name: 'Klingon Letter Opener',
+                category: ['Office Warfare', 'StarTrek'],
+                availableSince: 2007
+            }, {
+                name: '3Doodler 3D Printing Pen',
+                category: ['Design', 'Hits for Kids'],
+                availableSince: 1999
+            }, {
+                name: '8-Bit Heat-Change Mug',
+                category: ['Coffee Equipment'],
+                availableSince: 2016
+            }
+        ]
+        console.table(someProducts) 
+
+        // Object Referenz
+        // keys gibt keys eines Objekts als Array zurück
+        console.log(Object.keys(someProduct))
+        // values gibt vaules eines Objekts als Array zurück
+        console.log(Object.values(someProduct))
+        // entries gibt key/value Paare als Array zurück
+        console.log(Object.entries(someProduct))
+
+        // JSON format (immer mit Anführungszeichen: " ")
+        {
+            name: "Peter"
+        }
+
+        // JSON Funktionen 
+        // stringify() wandelt JS in einen JSON String um
+        let jsToJson = JSON.stringify({
+            name: 'Toaster',
+            inStock: 33,
+            price: 19.99
+        })
+        console.log(jsToJson)
+
+        // parse() liest JSON String ein und gibt JS zurück
+        let jsonToJs = JSON.parse('{"name":"Toaster","inStock":33,"price":19.99}')
+        console.log(jsonToJs) 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
