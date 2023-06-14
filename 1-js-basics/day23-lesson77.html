@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 77: Knack den Code mit Wortanalyse [»Kopfnuss«]
+            Ihr Auftraggeber ist der Hersteller einer Krypto-Software, die sich 
+            mit dem Knacken von Codes beschäftigt. Einer der neuen Algorithmen 
+            soll anhand von Worthäufigkeiten Rückschlüsse über verschlüsselte 
+            Texte ermöglichen. Deswegen hat er bei Ihnen die Funktion 
+            wordOccurance in Auftrag gegeben, die Worthäufigkeiten ermittelt.
+
+            wordOccurance soll einen Text einlesen und die Häufigkeit aller 
+            Wörter bestimmen. Der Rückgabewert soll ein Objekt sein in der 
+            Form: {Wort1: Häufigkeit1, Wort2: Häufigkeit2, …}.
+        */
+
+        let text =
+            'In cryptology, a code is a method used to encrypt a message that '
+            + 'operates at the level of meaning; that is, words or phrases are '
+            + 'converted into something else. A code might transform "change" '
+            + 'into "CVGDK" or "cocktail lounge". A codebook is needed to '
+            + 'encrypt, and decrypt the phrases or words.'
+
+        console.log(text)
+
+        const wordOccurrance = text => text
+            .replace(/[^\w ]/g, '')
+            .toLowerCase()
+            .split(' ')
+            .reduce(callbackFn, {})
+            // reduce übergibt der callbackFn 4 parameter:
+            // 1. rückgabewert vorheriger durchlauf, oder initialwert
+            // 2. element des arrays
+            // 3. index des elements
+            // 4. das array selbst
+
+        const callbackFn = (obj, element) => {
+            if (!obj[element]) obj[element] = 0
+            obj[element] += 1
+            return obj
+        } 
+
+        console.log(wordOccurrance(text))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

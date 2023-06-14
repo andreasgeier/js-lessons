@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 76: Geoquiz — Teil 3
+            Überarbeiten Sie das Geoquiz (Übung 72). Verwenden Sie diesmal für 
+            die Daten ein Objekt statt des Arrays. Greifen Sie dabei auf die 
+            neue Konstante countriesWithCapital zu.
+            
+            Passen Sie zunächst nur die Funktion capitalOf an, sodass sie die 
+            neue Datenstruktur verwendet.
+
+            Hinweis
+            Möglicherweise wundern Sie sich, dass die Keys hier in 
+            Anführungszeichen stehen. Im Grunde ist es egal, ob sie in 
+            Anführungszeichen stehen oder nicht. Technisch ist beides möglich. 
+            In der Praxis macht es hier Sinn, Anführungszeichen zu verwenden, 
+            weil diese Keys (Länder) — genau wie die Values (Städte) — 
+            datenartigen Charakter haben. Dadurch lässt es sich nicht 
+            ausschließen, dass eine Erweiterung des Programmes irgendwann 
+            einmal Ländernamen verwendet werden, die Leer- oder Sonderzeichen 
+            enthalten (z.B. "U.S.A."). Dann wären die Anführungszeichen 
+            zwingend nötig.
+        */
+
+
+        const countriesWithCapital = {
+            'United Kingdom': 'London',
+            'France': 'Paris',
+            'Germany': 'Berlin',
+            'Switzerland': 'Bern',
+            'Austria': 'Vienna',
+            'Russia': 'Moscow'
+        }
+
+        const capitalOf = country => countriesWithCapital[country]
+
+        console.log(capitalOf('Switzerland'))
+        console.log(capitalOf('United Kingdom'))
+        console.log(capitalOf('Russia'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

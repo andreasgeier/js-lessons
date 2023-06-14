@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 78: Geoquiz — Teil 4
+            Überarbeiten Sie das Geoquiz (Übung 73). Verwenden Sie dabei wieder 
+            die neue Konstante countriesWithCapital:
+        */
+
+        const countriesWithCapital = {
+            UK: 'London',
+            France: 'Paris',
+            Germany: 'Berlin',
+            Switzerland: 'Bern',
+            Austria: 'Vienna',
+            Russia: 'Moscow'
+        }
+
+        const countryForCapital = capital => {
+            const i = Object.values(countriesWithCapital).indexOf(capital)
+            const r = Object.keys(countriesWithCapital)
+            return r[i]
+        }
+
+        console.log(countryForCapital('Berlin'))
+        console.log(countryForCapital('London'))
+        console.log(countryForCapital('Vienna'))
+
+        // Lösung aus Kapitel 26.6
+        const countryForCapital2 = capital =>
+            Object.keys(countriesWithCapital).find(
+                country => capital === countriesWithCapital[country],
+            )
+
+        console.log(countryForCapital2('Berlin'))
+        console.log(countryForCapital2('London'))
+        console.log(countryForCapital2('Vienna'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
