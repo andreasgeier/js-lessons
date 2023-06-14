@@ -88,6 +88,10 @@
 --- [Lesson 73](1-js-basics/day22-lesson73.html): Geo-Quiz 2
 --- [Lesson 74](1-js-basics/day22-lesson74.html): Pokemon
 --- [Lesson 75](1-js-basics/day22-lesson75.html): Cocktails mixen
+--- [Lesson 76](1-js-basics/day23-lesson76.html): Geo-Quiz 3
+--- [Lesson 77](1-js-basics/day23-lesson77.html): Wort-Analyse
+--- [Lesson 78](1-js-basics/day23-lesson78.html): Geo-Quiz 4
+--- [Lesson 79](1-js-basics/day23-lesson79.html): Cocktails mixen 2
 
 <br>
 
@@ -112,6 +116,7 @@
 --- [Day 18](notes/day18.html): times(), range()
 --- [Day 21](notes/day21.html): rest-Parameter
 --- [Day 22](notes/day22.html): Schachbrett als multidimensionales Array
+--- [Day 23](notes/day23.html): Objects, JSON
 
 <br>
 
