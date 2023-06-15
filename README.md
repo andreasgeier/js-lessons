@@ -100,7 +100,7 @@
 
 ## notes
 
-##### js-basics, week 1 - ...
+##### js-basics, week 1 - 5
 
 [Day 01](notes/day01.html): Strings und Operatoren
 --- [Day 02](notes/day02.html): Variablen, typeof, String-Verkettung
@@ -127,5 +127,5 @@
 ## projects
 
 [Blackjack game](projects/blackjack.html): work in progress...
-[JS Cheat Sheet](projects/js-cheatsheet.html): not yet started...
+--- [JS Cheat Sheet](projects/js-cheatsheet.html): not yet started...
 
