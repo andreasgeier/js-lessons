@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 80: Vorname vor Nachname oder Nachname vor Vorname?
+
+            Wenn Sie der Name der Übung beim Lesen genauso verwirrt wie uns 
+            beim Schreiben, dann liegt das daran, dass die Reihenfolge von Vor- 
+            und Nachnamen nicht immer eindeutig ist. Machmal heißt es Max 
+            Mustermann und manchmal auch Mustermann, Max. Damit Benutzer der 
+            Funktion logTransformedName (aus Übung 36) nicht auch so verwirrt 
+            sind, stellen Sie sie besser auf named parameters um.
+        */
+
+        let transformName = ({firstName, lastName}) =>
+            `${lastName},  ${firstName.charAt(0)}.`
+
+        const user = {
+            firstName: 'Lex',
+            lastName: 'Luthor'
+        }
+
+        console.log(transformName(user))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Bauen Sie die Lösung aus Übung 57 so um, dass Sie eine Funktion 
+            einsparen und der Aufruf der Funktion triangle wie folgt aussieht:
+
+            console.log(triangle({ height: 10 }))
+​
+            Dabei soll es möglich sein, optional das verwendete Zeichen zu 
+            bestimmen, z.B.:
+
+            console.log(triangle({ height: 10, character: '#' }))
+​
+            Beim Aufruf von triangle ohne Parameter soll ein Dreieck der Höhe 5 
+            aus Sternchen (*) entstehen.
+        */
+
+        const drawLine = (char, count) => 
+            (count === 0) ? '' : char + drawLine(char, count - 1)
+
+        const triangle = (char = '*', count = 5, reverse = true) => {
+            if (count === 0) return ''
+            if (reverse) return triangle(char, count - 1, reverse) + drawLine(char, count) + '\n'
+            return drawLine(char, count) + '\n' + triangle(char, count - 1)
+        }
+
+        // console.log(triangle('*', 5, true)) 
+        console.log(triangle()) 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

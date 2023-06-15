@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+            Übung 82: Ist es noch weit? Sind wir schon da?
+            
+            Die Formel zur Berechnung von Entfernungen lautet:
+
+            Math.sqrt((yDestination - yOrigin) ** 2 + (xDestination - xOrigin) ** 2)
+​
+            Schreiben Sie eine Funktion distance, die Sie z.B. folgendermaßen 
+            aufrufen können:
+
+            distance({ x: 1, y: 1 }, { x: 5, y: 1 }) // => 4
+        */
+
+        const distance = (
+            {x: xOrigin, y: yOrigin}, {x: xDestination, y: yDestination}
+        ) => Math.sqrt(
+            (yDestination - yOrigin) ** 2 + (xDestination - xOrigin) ** 2
+        )
+
+        console.log(distance({ x: 1, y: 1 }, { x: 5, y: 1 })) // => 4 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
