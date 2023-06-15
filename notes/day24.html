@@ -158,6 +158,34 @@
 
         console.log(formatProduct(product2))
 
+        // Rest-Parameter für Objekte
+        const product3 = {
+            name: 'Dark Vader',
+            category: 'Star Wars',
+            price: '29.99',
+        }
+
+        const {name, ...allTheRest} = product3
+
+        console.log(allTheRest) // => {category: 'Star Wars', price: '29.99'}
+
+        // Default-Parameter für Object Destructuring
+        const foo = ({ a = 1, b = 2 }) => `a: ${a}, b: ${b}`
+
+        console.log(foo({ a: 7 })) // => a: 7, b: 2
+        console.log(foo({ b: 7 })) // => a: 1, b: 7
+        console.log(foo({ a: 7, b: 8 })) // => a: 7, b: 8
+        console.log(foo()) // => TypeError: Cannot match against 'undefined' or 'null'.
+
+        // Kombiniere Object-Defaults & Default für fehlende Funktionsargumente
+        const foo2 = ({ a = 1, b = 2 } = { a: 3, b: 4 }) => `a: ${a}, b: ${b}`
+
+        console.log(foo2({ a: 7 })) // => a: 7, b: 2
+        console.log(foo2({})) // => a: 1, b: 2
+        console.log(foo2()) // => a: 3, b: 4
+
+
+
     </script>
 </head>
 <body>
