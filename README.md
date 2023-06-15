@@ -92,6 +92,9 @@
 --- [Lesson 77](1-js-basics/day23-lesson77.html): Wort-Analyse
 --- [Lesson 78](1-js-basics/day23-lesson78.html): Geo-Quiz 4
 --- [Lesson 79](1-js-basics/day23-lesson79.html): Cocktails mixen 2
+--- [Lesson 80](1-js-basics/day24-lesson80.html): Sprechende Parameter
+--- [Lesson 81](1-js-basics/day24-lesson81.html): Dreieck berechnen mit Objektparameter
+--- [Lesson 82](1-js-basics/day24-lesson82.html): Distanz berechnen mit Objektparameter
 
 <br>
 
