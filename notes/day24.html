@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        // CSV
+        const CSV = `name, category, price
+                     Klingon Letter Opener, Office Warfare, 19.99
+                     Backpack of Holding, Travel, 29.99
+                     Tardis Alarmclock, Merchandise, 15.99`
+
+        // Destruct categories from CSV first row
+        const categories = csv => csv
+            .split('\n') // split string at line break
+            .slice(0, 1) // get first line only
+            .toString() // array to string (bc line 1 is still one string)
+            .split(', ') // split line 1 into array elements
+
+        console.log('Die Kategorien als Array:')
+        console.log(categories(CSV))
+
+        // Destruct products from CSV
+        const products = csv => csv
+            .split('\n') // split string at line break
+            .slice(1) // remove row with categories
+            .map(
+                y => y.trim() // remove whitespace
+                      .split(', ') // split string, get array
+            )
+
+        console.log('Die Produkte als zweidimensionales Array:')
+        console.log(products(CSV))
+
+        // Return product as object
+        const buildObj = product => {
+            return {
+                [categories(CSV)[0]]: product[0],
+                [categories(CSV)[1]]: product[1],
+                [categories(CSV)[2]]: product[2] 
+            }
+        }
+
+        // build array with products as objects
+        const destruct = csv => products(csv).map(buildObj)
+
+        console.log('Ergebnis (Umwandlung CSV -> Objekten):')
+        console.log(destruct(CSV))
+
+        /*
+            ------------------------------------------------------------------
+            Optimierungsmöglichkeiten (Kapitel 27.3)
+            ------------------------------------------------------------------
+        */
+
+        // Schritt 1: csvImport übergibt ein Array an arrToObj
+        // Kurzschreibweise bei const
+        const arrToObj1 = arr => {
+            const [name, category, price] = arr
+            return {
+                name,
+                category,
+                price,
+            }
+        }
+
+        // Schritt 2: keys als Parameter-Liste
+        const arrToObj2 = ([name, category, price]) => {
+            return {
+                name,
+                category,
+                price,
+            }
+        }
+
+        // Schritt 3: einzeilig ohne return
+        const arrToObj3 = ([name, category, price]) => ({
+                name,
+                category,
+                price,
+            })
+
+        const csvImport = csv =>
+            csv
+                .split('\n')
+                .map(s => s.match(/\W*(.+)\W*/)[1])
+                .slice(1)
+                .map(s => s.split(', '))
+                .map(arrToObj3)
+
+        console.log(csvImport(CSV))
+
+        /*
+            ------------------------------------------------------------------
+            Objekte destrukturieren (Kapitel 27.4)
+            ------------------------------------------------------------------
+        */
+
+        const product = {
+            name: 'Lightsaber',
+            category: 'Star Wars',
+            price: '19.99',
+        }
+
+        // Schritt 1: Variablen klassisch über Punktschreibweise zuweisen
+        const message1 = product => {
+            const name = product.name
+            const price = product.price
+            return `On sale! ${name} - buy now for only $${price}`
+        }
+
+        // Schritt 2: Objekt destrukturieren (pattern matching)
+        const message2 = product => {
+            const {name: prodName, price: prodPrice} = product
+            return `On sale! ${prodName} - buy now for only $${prodPrice}`
+        }
+
+        // Schritt 3: Es ist erlaubt, die Konstanten gleich zu benennen
+        const message3 = product => {
+            const {name: name, price: price} = product
+            return `On sale! ${name} - buy now for only $${price}`
+        }
+
+        // Schritt 4: Damit ist Kurzschreibweise möglich
+        const message4 = product => {
+            const {name, price} = product
+            return `On sale! ${name} - buy now for only $${price}`
+        }
+
+        // Schritt 5: Direkt als Parameter-Liste
+        const message5 = ({name, price}) => {
+            return `On sale! ${name} - buy now for only $${price}`
+        }
+
+        // Schritt 6: Einzeiler ohne return
+        const message6 = ({name, price}) => 
+            `On sale! ${name} - buy now for only $${price}`
+
+        console.log(message1(product))
+        console.log(message2(product))
+        console.log(message3(product))
+        console.log(message4(product))
+        console.log(message5(product))
+        console.log(message6(product))
+
+        // Default-Werte, wenn key nicht vorhanden
+        // Müssen im Gegensatz zu Arrays nicht am Ende stehen
+        const product2 = {
+            name: 'Dark Vader',
+            price: '29.99',
+        }
+
+        const formatProduct = ({category = 'Miscellaneous', name, price}) =>
+            `${name} [${category}] - buy now for only $${price}`
+
+        console.log(formatProduct(product2))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
