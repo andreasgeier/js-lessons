@@ -117,6 +117,7 @@
 --- [Day 21](notes/day21.html): rest-Parameter
 --- [Day 22](notes/day22.html): Schachbrett als multidimensionales Array
 --- [Day 23](notes/day23.html): Objects, JSON
+--- [Day 24](notes/day24.html): Objects, CSV, Destructering
 
 <br>
 
