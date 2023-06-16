@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <!-- use this snippet if you want to highlight custom tags like
-         an inline code tag
+    <!-- use this snippet if you want to highlight custom tags
     <script>
         'use strict'
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -28,12 +27,14 @@
         });
     </script>
     -->
+
     <!-- custom page styles -->
     <style>
         html {
             color: rgb(34, 39, 46); 
             font-family: 'Roboto Serif', serif;
             line-height: 1.5;
+            scroll-behavior: smooth;
         }
         body {
             margin: 0;
@@ -50,13 +51,16 @@
             margin-top: 4rem;
             background-color: rgb(248, 249, 250);
         }
+        pre {
+            margin: 1rem 0 1.5rem; 
+        }
         code {
             font-family: 'Roboto Mono', monospace;
-            border-radius: .5rem         
+            border-radius: .5rem;       
         }
         p code {
             padding: 0 .25rem .125rem;
-            background-color: #e2e2e2;
+            background-color: #ebebeb;
             border-radius: .25rem;
         }
         h1 {
@@ -64,10 +68,33 @@
             font-weight: 300;
             text-align: center;
         }
+        h2 a, h2 a:visited, h2 a:active, h3 a, h3 a:visited, h3 a:active {
+           color: inherit;
+           text-decoration: none; 
+        }
+        h2 a:hover::before, h3 a:hover::before {
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0;
+            content: url('data:image/svg+xml;utf8,<svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M212.853,122.34277l-28.28418,28.28516a56.06576,56.06576,0,0,1-79.19629,0,12.0001,12.0001,0,0,1,16.9707-16.9707,32.03673,32.03673,0,0,0,45.25488,0l28.28418-28.28516a31.99969,31.99969,0,1,0-45.25488-45.25391L138.979,71.76562a12.0001,12.0001,0,1,1-16.9707-16.9707l11.64844-11.64746A55.99989,55.99989,0,1,1,212.853,122.34277Zm-95.834,61.89356-11.64648,11.64551a31.99969,31.99969,0,0,1-45.25488-45.25391l28.28418-28.28516a32.03673,32.03673,0,0,1,45.25488,0,12.0001,12.0001,0,0,0,16.9707-16.9707,56.06459,56.06459,0,0,0-79.19629,0L43.147,133.65723a55.9999,55.9999,0,0,0,79.19629,79.19531L133.98975,201.207a12.0001,12.0001,0,1,0-16.97071-16.9707Z"/></svg>');
+            transform: translateX(calc(-100% - .5rem));
+        }
+        h2 a:hover::before {
+            top: .125rem;
+        }
+        h2, h3 {
+            position: relative;
+            scroll-margin-top: 2rem;
+        }
         h2:not(:first-of-type) {
             padding-top: 5rem;
             margin-top: 6rem;
             border-top: 2px solid rgb(34, 39, 46);
+        }
+        h2:not(:first-of-type) a:hover::before {
+            top: 5.125rem;
         }
         h3 {
             margin-top: 2rem;
@@ -89,11 +116,13 @@
     </header>
 
     <div class="content">
-        <h2>String methods</h2>
+        
+
+        <h2 id="string-methods"><a href="#string-methods">String methods</a></h2>
 
         <!-- string.at() -->
         <section>
-            <h3>at()</h3>
+            <h3 id="string.at"><a href="#string.at">at()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.at(1) // => 'e'
@@ -105,7 +134,7 @@ str.at(99) // => undefined</code></pre>
 
         <!-- string.charAt() -->
         <section>
-            <h3>charAt()</h3>
+            <h3 id="string.charat"><a href="#string.charat">charAt()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.charAt(1) // => 'e'
@@ -116,7 +145,7 @@ str.charAt(99) // => ''</code></pre>
 
         <!-- string.concat() -->
         <section>
-            <h3>concat()</h3>
+            <h3 id="string.concat"><a href="#string.concat">concat()</a></h3>
             <pre><code class="language-javascript">const str1 = 'Hello'
 const str2 = 'World'
 
@@ -127,7 +156,7 @@ str1.concat(' ', str2) // => 'Hello World'</code></pre>
         
         <!-- string.endsWith() -->
         <section>
-            <h3>endsWith()</h3>
+            <h3 id="string.endswith"><a href="#string.endswith">endsWith()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.endsWith('World') // => true
@@ -138,7 +167,7 @@ str.endsWith('World', 5) // => false</code></pre>
 
         <!-- string.includes() -->
         <section>
-            <h3>includes()</h3>
+            <h3 id="string.includes"><a href="#string.includes">includes()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.includes('Hello') // => true
@@ -149,7 +178,7 @@ str.includes('Hello', 5) // => false</code></pre>
 
         <!-- string.indexOf() -->
         <section>
-            <h3>indexOf()</h3>
+            <h3 id="string.indexof"><a href="#string.indexof">indexOf()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.indexOf('lo') // => 3
@@ -160,7 +189,7 @@ str.indexOf('lo', 5) // => -1</code></pre>
 
         <!-- string.lastIndexOf() -->
         <section>
-            <h3>lastIndexOf()</h3>
+            <h3 id="string.lastindexof"><a href="#string.lastindexof">lastIndexOf()</a></h3>
             <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
 
 str.lastIndexOf('dog') // => 24
@@ -171,7 +200,7 @@ str.lastIndexOf('dog', 15) // => 3</code></pre>
 
         <!-- string.match() -->
         <section>
-            <h3>match()</h3>
+            <h3 id="string.match"><a href="#string.match">match()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.match(/[A-Z]/g) // => ['H', 'W']
@@ -183,7 +212,7 @@ str.match(/[0-9]/) // => null</code></pre>
 
         <!-- string.padEnd() -->
         <section>
-            <h3>padEnd()</h3>
+            <h3 id="string.padend"><a href="#string.padend">padEnd()</a></h3>
             <pre><code class="language-javascript">const str = 'abc'
 
 str.padEnd(8) // => 'abc     '
@@ -194,7 +223,7 @@ str.padEnd(8, '.') // => 'abc.....'</code></pre>
 
         <!-- string.padStart() -->
         <section>
-            <h3>padStart()</h3>
+            <h3 id="string.padstart"><a href="#string.padstart">padStart()</a></h3>
             <pre><code class="language-javascript">const last4DigitsOfCreditCard = '6789'
 
 last4DigitsOfCreditCard.padStart(16, '*') // => '************6789'</code></pre>
@@ -204,7 +233,7 @@ last4DigitsOfCreditCard.padStart(16, '*') // => '************6789'</code></pre>
 
         <!-- string.repeat() -->
         <section>
-            <h3>repeat()</h3>
+            <h3 id="string.repeat"><a href="#string.repeat">repeat()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World! '
 
 str.repeat(2) // => 'Hello World! Hello World! '</code></pre>
@@ -214,7 +243,7 @@ str.repeat(2) // => 'Hello World! Hello World! '</code></pre>
 
         <!-- string.replace() -->
         <section>
-            <h3>replace()</h3>
+            <h3 id="string.replace"><a href="#string.replace">replace()</a></h3>
             <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
 
 str.replace('dog', 'cat') // => 'My cat is not like other dogs.'
@@ -225,7 +254,7 @@ str.replace(/dog/g, 'cat') // => 'My cat is not like other cats.'</code></pre>
 
         <!-- string.replaceAll() -->
         <section>
-            <h3>replaceAll()</h3>
+            <h3 id="string.replaceall"><a href="#string.replaceall">replaceAll()</a></h3>
             <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
 
 str.replaceAll('dog', 'cat') // => 'My cat is not like other cats.'</code></pre>
@@ -235,7 +264,7 @@ str.replaceAll('dog', 'cat') // => 'My cat is not like other cats.'</code></pre>
 
         <!-- string.search() -->
         <section>
-            <h3>search()</h3>
+            <h3 id="string.search"><a href="#string.search">search()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.search(/W/g) // => 6</code></pre>
@@ -245,7 +274,7 @@ str.search(/W/g) // => 6</code></pre>
 
         <!-- string.slice() -->
         <section>
-            <h3>slice()</h3>
+            <h3 id="string.slice"><a href="#string.slice">slice()</a></h3>
             <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
 
 str.slice(14) // => 'like other dogs.'
@@ -258,7 +287,7 @@ str.slice(-11, -6) // => 'other'</code></pre>
 
         <!-- string.split() -->
         <section>
-            <h3>split()</h3>
+            <h3 id="string.split"><a href="#string.split">split()</a></h3>
             <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
 
 str.split(' ') // => ['My', 'dog', 'is', 'not', 'like', 'other', 'dogs.']
@@ -270,7 +299,7 @@ str.split('')[1] // => 'y'</code></pre>
 
         <!-- string.startsWith() -->
         <section>
-            <h3>startsWith()</h3>
+            <h3 id="string.startswith"><a href="#string.startswith">startsWith()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.startsWith('He') // => true
@@ -281,7 +310,7 @@ str.startsWith('He', 3) // => false</code></pre>
 
         <!-- string.substring() -->
         <section>
-            <h3>substring()</h3>
+            <h3 id="string.substring"><a href="#string.substring">substring()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.substring(6) // => 'World'
@@ -292,7 +321,7 @@ str.substring(6, 9) // => 'Wor'</code></pre>
 
         <!-- string.toLowerCase() -->
         <section>
-            <h3>toLowerCase()</h3>
+            <h3 id="string.tolowercase"><a href="#string.tolowercase">toLowerCase()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.toLowerCase() // => 'hello world'</code></pre>
@@ -302,7 +331,7 @@ str.toLowerCase() // => 'hello world'</code></pre>
 
         <!-- string.toUpperCase() -->
         <section>
-            <h3>toUpperCase()</h3>
+            <h3 id="string.touppercase"><a href="#string.touppercase">toUpperCase()</a></h3>
             <pre><code class="language-javascript">const str = 'Hello World'
 
 str.toUpperCase() // => 'HELLO WORLD'</code></pre>
@@ -312,7 +341,7 @@ str.toUpperCase() // => 'HELLO WORLD'</code></pre>
 
         <!-- string.trim() -->
         <section>
-            <h3>trim()</h3>
+            <h3 id="string.trim"><a href="#string.trim">trim()</a></h3>
             <pre><code class="language-javascript">const str = '   Hello World   '
 
 str.trim() // => 'Hello World'</code></pre>
@@ -322,7 +351,7 @@ str.trim() // => 'Hello World'</code></pre>
 
         <!-- string.trimEnd() -->
         <section>
-            <h3>trimEnd()</h3>
+            <h3 id="string.trimend"><a href="#string.trimend">trimEnd()</a></h3>
             <pre><code class="language-javascript">const str = '   Hello World   '
 
 str.trimEnd() // => '   Hello World'</code></pre>
@@ -332,7 +361,7 @@ str.trimEnd() // => '   Hello World'</code></pre>
 
         <!-- string.trimStart() -->
         <section>
-            <h3>trimStart()</h3>
+            <h3 id="string.trimstart"><a href="#string.trimstart">trimStart()</a></h3>
             <pre><code class="language-javascript">const str = '   Hello World   '
 
 str.trimStart() // => 'Hello World   '</code></pre>
@@ -340,11 +369,11 @@ str.trimStart() // => 'Hello World   '</code></pre>
             <p>Syntax: <code>trimStart()</code> <span class="divider">/</span> Return value: String</p>
         </section>
 
-        <h2>Array methods</h2>
+        <h2 id="array-methods"><a href="#array-methods">Array methods</a></h2>
 
         <!-- array.method() -->
         <section>
-            <h3>method()</h3>
+            <h3 id="array.method"><a href="#array.method">method()</a></h3>
             <pre><code class="language-javascript">const arr = []
 
 arr.method() // => []</code></pre>
@@ -352,11 +381,11 @@ arr.method() // => []</code></pre>
             <p>Syntax: <code></code> <span class="divider">/</span> Return value: </p>
         </section>
 
-        <h2>Object methods</h2>
+        <h2 id="object-methods"><a href="#object-methods">Object methods</h2>
 
         <!-- object.method() -->
         <section>
-            <h3>method()</h3>
+            <h3 id="object.method"><a href="#object.method">method()</a></h3>
             <pre><code class="language-javascript">const obj = {}
 
 obj.method() // => {}</code></pre>
