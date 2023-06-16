@@ -22,19 +22,58 @@
             aus Sternchen (*) entstehen.
         */
 
-        const drawLine = (char, count) => 
-            (count === 0) ? '' : char + drawLine(char, count - 1)
+        const drawLine = ({char, count}) => 
+            (count === 0) ? '' : char + drawLine({char, count: count - 1})
 
-        const triangle = (char = '*', count = 5, reverse = true) => {
+        const triangle = (
+            {char = '*', count = 5, reverse = true} // def. values for object
+            = {char: '*', count: 5, reverse: true}  // default object
+        ) => {
             if (count === 0) return ''
-            if (reverse) return triangle(char, count - 1, reverse) + drawLine(char, count) + '\n'
-            return drawLine(char, count) + '\n' + triangle(char, count - 1)
+            if (reverse) {
+                return triangle({char, count: count - 1, reverse}) 
+                    + drawLine({char, count}) 
+                    + '\n'
+            }
+            if (!reverse) {
+                return drawLine({char, count}) 
+                    + '\n' 
+                    + triangle({char, count: count - 1, reverse})
+            }
         }
 
-        // console.log(triangle('*', 5, true)) 
-        console.log(triangle()) 
+        console.log(triangle())
+        console.log(triangle({char: '#', reverse: false}))
+        console.log(triangle({char: 'f', count: 9, reverse: true}))
 
-    </script>
+        /*
+        
+            Lösung ohne Object - siehe lesson 57
+            (Achtung - wegen default values Änderung an Zeile 66)
+            -----------------------------------------------------
+
+            const drawLine = (char, count) => 
+                (count === 0) ? '' : char + drawLine(char, count - 1)
+
+            const triangle = (char = '*', count = 5, reverse = true) => {
+                if (count === 0) return ''
+                if (reverse) {
+                    return triangle(char, count - 1, reverse) 
+                        + drawLine(char, count) 
+                        + '\n'
+                }
+                if (!reverse) {
+                    return drawLine(char, count) 
+                        + '\n' 
+                        + triangle(char, count - 1, reverse)
+                }
+            }
+
+            console.log(triangle('#', 7, false))
+            
+        */
+
+</script>
 </head>
 <body>
     
