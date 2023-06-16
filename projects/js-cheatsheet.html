@@ -4,14 +4,370 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Cheat Sheet</title>
+
+    <!-- Normalize CSS via GitHub -->
+    <link rel="stylesheet" href="https://github.com/necolas/normalize.css/blob/master/normalize.css">
+
+    <!-- fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700&display=swap" rel="stylesheet">
+
+    <!-- highlight.js via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- use this snippet if you want to highlight custom tags like
+         an inline code tag
     <script>
         'use strict'
-
-        // project not yet started...
-
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('p code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
     </script>
+    -->
+    <!-- custom page styles -->
+    <style>
+        html {
+            color: rgb(34, 39, 46); 
+            font-family: 'Roboto Serif', serif;
+            line-height: 1.5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 2rem 3rem;
+        }
+        footer {
+            color: rgb(95, 99, 104);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background-color: rgb(248, 249, 250);
+        }
+        code {
+            font-family: 'Roboto Mono', monospace;
+            border-radius: .5rem         
+        }
+        p code {
+            padding: 0 .25rem .125rem;
+            background-color: #e2e2e2;
+            border-radius: .25rem;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        h2:not(:first-of-type) {
+            padding-top: 5rem;
+            margin-top: 6rem;
+            border-top: 2px solid rgb(34, 39, 46);
+        }
+        h3 {
+            margin-top: 2rem;
+        }
+        .content {
+            max-width: 50rem;
+            padding: 0 3rem;
+            margin: auto;
+        }
+        .divider {
+            display: inline-block;
+            margin: auto .5rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>JavaScript Cheat Sheet</h1>
+    </header>
+
+    <div class="content">
+        <h2>String methods</h2>
+
+        <!-- string.at() -->
+        <section>
+            <h3>at()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.at(1) // => 'e'
+str.at(-2) // => 'l'
+str.at(99) // => undefined</code></pre>
+            <p>The <code>at()</code> method takes an integer value and returns a new String consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.</p>
+            <p>Syntax: <code>at(index)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.charAt() -->
+        <section>
+            <h3>charAt()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.charAt(1) // => 'e'
+str.charAt(99) // => ''</code></pre>
+            <p>The <code>charAt()</code> method of String values returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.</p>
+            <p>Syntax: <code>charAt(index)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.concat() -->
+        <section>
+            <h3>concat()</h3>
+            <pre><code class="language-javascript">const str1 = 'Hello'
+const str2 = 'World'
+
+str1.concat(' ', str2) // => 'Hello World'</code></pre>
+            <p>The <code>concat()</code> method concatenates the string arguments to the calling string and returns a new string.</p>
+            <p>Syntax: <code>concat(string)</code> <code>concat(string1, string2, /* ..., */ stringN)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+        
+        <!-- string.endsWith() -->
+        <section>
+            <h3>endsWith()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.endsWith('World') // => true
+str.endsWith('World', 5) // => false</code></pre>
+            <p>The <code>endsWith()</code> method determines whether a string ends with the characters of a specified string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+            <p>Syntax: <code>endsWith(searchString)</code> <code>endsWith(searchString, endPosition)</code> <span class="divider">/</span> Return value: Boolean</p>
+        </section>
+
+        <!-- string.includes() -->
+        <section>
+            <h3>includes()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.includes('Hello') // => true
+str.includes('Hello', 5) // => false</code></pre>
+            <p>The <code>includes()</code> method performs a case-sensitive search to determine whether one string may be found within another string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+            <p>Syntax: <code>includes(searchString)</code> <code>includes(searchString, startPosition)</code> <span class="divider">/</span> Return value: Boolean</p>
+        </section>
+
+        <!-- string.indexOf() -->
+        <section>
+            <h3>indexOf()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.indexOf('lo') // => 3
+str.indexOf('lo', 5) // => -1</code></pre>
+            <p>The <code>indexOf()</code> method of String values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.</p>
+            <p>Syntax: <code>indexOf(searchString)</code> <code>indexOf(searchString, startPosition)</code> <span class="divider">/</span> Return value: Found index as Integer, or <code>-1</code> if not found</p>
+        </section>
+
+        <!-- string.lastIndexOf() -->
+        <section>
+            <h3>lastIndexOf()</h3>
+            <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
+
+str.lastIndexOf('dog') // => 24
+str.lastIndexOf('dog', 15) // => 3</code></pre>
+            <p>The <code>lastIndexOf()</code> method of String values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.</p>
+            <p>Syntax: <code>lastIndexOf(searchString)</code> <code>lastIndexOf(searchString, endPosition)</code> <span class="divider">/</span> Return value: Found index, or <code>-1</code> if not found</p>
+        </section>
+
+        <!-- string.match() -->
+        <section>
+            <h3>match()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.match(/[A-Z]/g) // => ['H', 'W']
+str.match(/[A-Z]/) // => ['H']
+str.match(/[0-9]/) // => null</code></pre>
+            <p>The <code>match()</code> method retrieves the result of matching a string against a regular expression (regex).</p>
+            <p>Syntax: <code>match(regex)</code> <span class="divider">/</span> Return value: Array</p>
+        </section>
+
+        <!-- string.padEnd() -->
+        <section>
+            <h3>padEnd()</h3>
+            <pre><code class="language-javascript">const str = 'abc'
+
+str.padEnd(8) // => 'abc     '
+str.padEnd(8, '.') // => 'abc.....'</code></pre>
+            <p>The <code>padEnd()</code> method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string.</p>
+            <p>Syntax: <code>padEnd(targetLength)</code> <code>padEnd(targetLength, padString)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.padStart() -->
+        <section>
+            <h3>padStart()</h3>
+            <pre><code class="language-javascript">const last4DigitsOfCreditCard = '6789'
+
+last4DigitsOfCreditCard.padStart(16, '*') // => '************6789'</code></pre>
+            <p>The <code>padStart()</code> method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.</p>
+            <p>Syntax: <code>padStart(targetLength)</code> <code>padStart(targetLength, padString)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.repeat() -->
+        <section>
+            <h3>repeat()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World! '
+
+str.repeat(2) // => 'Hello World! Hello World! '</code></pre>
+            <p>The <code>repeat()</code> method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.</p>
+            <p>Syntax: <code>repeat(count)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.replace() -->
+        <section>
+            <h3>replace()</h3>
+            <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
+
+str.replace('dog', 'cat') // => 'My cat is not like other dogs.'
+str.replace(/dog/g, 'cat') // => 'My cat is not like other cats.'</code></pre>
+            <p>The <code>replace()</code> method returns a new string with one, some, or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegEx, and the replacement can be a string or a function called for each match. If pattern is a string, only the first occurrence will be replaced. The original string is left unchanged.</p>
+            <p>Syntax: <code>replace(pattern, replacement)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.replaceAll() -->
+        <section>
+            <h3>replaceAll()</h3>
+            <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
+
+str.replaceAll('dog', 'cat') // => 'My cat is not like other cats.'</code></pre>
+            <p>The <code>replaceAll()</code> method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. The original string is left unchanged.</p>
+            <p>Syntax: <code>replaceAll(pattern, replacement)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.search() -->
+        <section>
+            <h3>search()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.search(/W/g) // => 6</code></pre>
+            <p>The <code>search()</code> method executes a search for a match between a regular expression and this String object.</p>
+            <p>Syntax: <code>search(regex)</code> <span class="divider">/</span> Return value: Index of the first match, or <code>-1</code> if no match was found</p>
+        </section>
+
+        <!-- string.slice() -->
+        <section>
+            <h3>slice()</h3>
+            <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
+
+str.slice(14) // => 'like other dogs.'
+str.slice(3, 6) // => 'dog'
+str.slice(-5) // => 'dogs.'
+str.slice(-11, -6) // => 'other'</code></pre>
+            <p>The <code>slice()</code> method extracts a section of a string and returns it as a new string, without modifying the original string.</p>
+            <p>Syntax: <code>slice(indexStart)</code> <code>slice(indexStart, indexEnd)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.split() -->
+        <section>
+            <h3>split()</h3>
+            <pre><code class="language-javascript">const str = 'My dog is not like other dogs.'
+
+str.split(' ') // => ['My', 'dog', 'is', 'not', 'like', 'other', 'dogs.']
+str.split(' ', 3) // => ['My', 'dog', 'is']
+str.split('')[1] // => 'y'</code></pre>
+            <p>The <code>split()</code> method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.</p>
+            <p>Syntax: <code>split(separator)</code> <code>split(separator, limit)</code> <span class="divider">/</span> Return value: Array</p>
+        </section>
+
+        <!-- string.startsWith() -->
+        <section>
+            <h3>startsWith()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.startsWith('He') // => true
+str.startsWith('He', 3) // => false</code></pre>
+            <p>The <code>startsWith()</code> method determines whether a string begins with the characters of a specified string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+            <p>Syntax: <code>startsWith(searchString)</code> <code>startsWith(searchString, startPosition)</code> <span class="divider">/</span> Return value: Boolean</p>
+        </section>
+
+        <!-- string.substring() -->
+        <section>
+            <h3>substring()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.substring(6) // => 'World'
+str.substring(6, 9) // => 'Wor'</code></pre>
+            <p>The <code>substring()</code> method returns the part of the string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.</p>
+            <p>Syntax: <code>substring(indexStart)</code> <code>substring(indexStart, indexEnd)</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.toLowerCase() -->
+        <section>
+            <h3>toLowerCase()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.toLowerCase() // => 'hello world'</code></pre>
+            <p>The <code>toLowerCase()</code> method returns the calling string value converted to lower case.</p>
+            <p>Syntax: <code>toLowerCase()</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.toUpperCase() -->
+        <section>
+            <h3>toUpperCase()</h3>
+            <pre><code class="language-javascript">const str = 'Hello World'
+
+str.toUpperCase() // => 'HELLO WORLD'</code></pre>
+            <p>The toUpperCase() method returns the calling string value converted to uppercase.</p>
+            <p>Syntax: <code>toUpperCase()</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.trim() -->
+        <section>
+            <h3>trim()</h3>
+            <pre><code class="language-javascript">const str = '   Hello World   '
+
+str.trim() // => 'Hello World'</code></pre>
+            <p>The <code>trim()</code> method removes whitespace from both ends of a string and returns a new string, without modifying the original string.</p>
+            <p>Syntax: <code>trim()</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.trimEnd() -->
+        <section>
+            <h3>trimEnd()</h3>
+            <pre><code class="language-javascript">const str = '   Hello World   '
+
+str.trimEnd() // => '   Hello World'</code></pre>
+            <p>The <code>trimEnd()</code> method removes whitespace from the end of a string and returns a new string, without modifying the original string. <code>trimRight()</code> is an alias of this method.</p>
+            <p>Syntax: <code>trimEnd()</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <!-- string.trimStart() -->
+        <section>
+            <h3>trimStart()</h3>
+            <pre><code class="language-javascript">const str = '   Hello World   '
+
+str.trimStart() // => 'Hello World   '</code></pre>
+            <p>The <code>trimStart()</code> method removes whitespace from the beginning of a string and returns a new string, without modifying the original string. <code>trimLeft()</code> is an alias of this method.</p>
+            <p>Syntax: <code>trimStart()</code> <span class="divider">/</span> Return value: String</p>
+        </section>
+
+        <h2>Array methods</h2>
+
+        <!-- array.method() -->
+        <section>
+            <h3>method()</h3>
+            <pre><code class="language-javascript">const arr = []
+
+arr.method() // => []</code></pre>
+            <p></p>
+            <p>Syntax: <code></code> <span class="divider">/</span> Return value: </p>
+        </section>
+
+        <h2>Object methods</h2>
+
+        <!-- object.method() -->
+        <section>
+            <h3>method()</h3>
+            <pre><code class="language-javascript">const obj = {}
+
+obj.method() // => {}</code></pre>
+            <p></p>
+            <p>Syntax: <code></code> <span class="divider">/</span> Return value: </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Footer - no content yet</p>
+    </footer>
 </body>
 </html>
