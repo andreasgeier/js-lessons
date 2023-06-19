@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Quotes</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <h1>Famous Quotes</h1>
+
+        <blockquote></blockquote>
+    </main>
+
+    <button onclick="document.querySelector('h1').innerHTML = 'Almost Famous Quotes'">Change h1</button>
+    <button onclick="document.querySelector('blockquote').innerHTML = quote">Add quote</button>
+    <button onclick="history.go(0)">Reset</button>
+
+    <script>
+        'use strict'
+        const quote = `
+            <p>
+                I have always wished for my computer to be as easy to use as my telephone;
+                my wish has come true because I can no longer figure out how to use my
+                telephone.
+            </p>
+            <footer>— <cite>Bjarne Stroustrup</cite></footer>
+        `
+    </script>
+</body>
+</html>
