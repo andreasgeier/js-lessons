@@ -143,7 +143,10 @@ Coming soon...
 --- [Day 22](notes/day22.html): Schachbrett als multidimensionales Array
 --- [Day 23](notes/day23.html): Objects, JSON
 --- [Day 24](notes/day24.html): Objects, CSV, Destructering
---- [Day 26](notes/day26.html): DOM
+
+##### js-dom, week 6
+
+[Day 26](notes/day26.html): DOM
 
 <br>
 
