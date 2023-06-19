@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button { margin: 0 4px 8px 0; }
+        button:last-of-type { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Hello <em>World</em></h1>
+
+    <!-- example content to play with -->
+    <h2>Headline h2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt sit quidem ullam quaerat ratione minima laudantium reprehenderit illo enim, sunt explicabo, asperiores incidunt. Rerum vel animi nisi. Vel, quia?</p>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Ratione minima laudantium reprehenderit illo enim:
+            <ul>
+                <li>Dolorem fuga</li>
+                <li>Deleniti nobis illo vel</li>
+                <li>Ea aspernatur similique</li>
+            </ul>
+        </li>
+        <li>Vero nihil omnis in</li>
+    </ul>
+    <h2>Headline h2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt sit quidem ullam quaerat ratione minima laudantium reprehenderit illo enim, sunt explicabo, asperiores incidunt. Rerum vel animi nisi. Vel, quia?</p>
+
+    <h2>Interaction</h2>
+
+    <!-- js part -->
+    <button onclick="document.querySelector('title').innerHTML = 'New'">Change page title</button>
+    <button onclick="document.querySelector('h1').innerHTML = 'Hello <em>DOM</em>'">Change h1</button>
+    <button onclick="document.querySelectorAll('h2').forEach(el => el.style.borderBottom = '2px solid red')">Change all h2</button>
+    <button onclick="document.querySelector('li').style.color = 'green'">Change first li</button>
+    <button onclick="document.querySelector('p:nth-of-type(2)').style.color = 'green'">Change second p</button>
+    <button onclick="document.querySelector('p:nth-of-type(2)').innerHTML = 'New text here'">Change content of second p</button>
+    <button onclick="history.go(0);">Reset</button>
+</body>
+</html>
