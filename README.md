@@ -96,6 +96,28 @@
 --- [Lesson 81](1-js-basics/day24-lesson81.html): Dreieck berechnen mit Objektparameter
 --- [Lesson 82](1-js-basics/day24-lesson82.html): Distanz berechnen mit Objektparameter
 
+## 2-js-dom
+
+##### week 6
+
+...
+
+## 3-node-js
+
+...
+
+## 4-webanwendungen
+
+...
+
+## 5-ttd
+
+...
+
+## 6-react
+
+...
+
 <br>
 
 ## notes
@@ -127,5 +149,5 @@
 ## projects
 
 [Blackjack game](projects/blackjack.html): work in progress...
---- [JS Cheat Sheet](projects/js-cheatsheet.html): not yet started...
+--- [JS Cheat Sheet](projects/js-cheatsheet.html): work in progress...
 
