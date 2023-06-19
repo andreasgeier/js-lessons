@@ -100,7 +100,7 @@
 
 ##### week 6
 
-Coming soon...
+[Lesson 01](2-js-dom/day26-lesson01.html): querySelector() & querySelectorAll
 
 ## 3-node-js
 
@@ -143,6 +143,7 @@ Coming soon...
 --- [Day 22](notes/day22.html): Schachbrett als multidimensionales Array
 --- [Day 23](notes/day23.html): Objects, JSON
 --- [Day 24](notes/day24.html): Objects, CSV, Destructering
+--- [Day 26](notes/day26.html): DOM
 
 <br>
 
