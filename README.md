@@ -147,6 +147,7 @@ Coming soon...
 ##### js-dom, week 6
 
 [Day 26](notes/day26.html): DOM
+--- [Day 30](notes/day30.html): Chat-Teilnehmer finden
 
 <br>
 
