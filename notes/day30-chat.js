@@ -1,10 +1,8 @@
-'use strict'
+
+
+// Chat search
 
 {
-    // Hilfsfunktion $ und $$
-    const $ = q => document.querySelector(q)
-    const $$ = q => Array.from(document.querySelectorAll(q))
-
     // Eventlistener registrieren
     const init = () => $('#member_search input')
         .addEventListener('keyup', 
@@ -36,3 +34,4 @@
 
     init()
 }
+

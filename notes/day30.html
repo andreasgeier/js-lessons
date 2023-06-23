@@ -5,31 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="day30.css">
-    <script src="day30.js" defer="defer"></script>
+    <script src="day30-dom-helper.js" defer="defer"></script>
+    <script src="day30-calculator.js" defer="defer"></script>
+    <script src="day30-chat.js" defer="defer"></script>
+    <script src="day30-message.js" defer="defer"></script>
+    <script src="day30-newsboard.js" defer="defer"></script>
 </head>
 <body>
-    <h1>Chat</h1>
+    <div class="container">
+        <h1>Chat</h1>
 
-    <!-- example content to play with -->
-    <section>
-        <h2>Search</h2>
-        <div id="member_search">
-            <input type="text" placeholder="Find a member..."/>
+        <!-- example content to play with -->
+        <section>
+            <h2>Search</h2>
+            <div id="member_search">
+                <input type="text" placeholder="Find a member..."/>
+            </div>
+        </section>
+    
+        <section>
+            <h2>Chat members</h2>
+            <ul id="chat_members">
+                <li class="admin">Heribert</li>
+                <li>Friedlinde</li>
+                <li>Tusnelda</li>
+                <li>Berthold</li>
+                <li>Oswine</li>
+                <li>Ladislaus</li>
+            </ul>
+        </section>    
+    </div>
+
+    <div class="container">
+        <div class="newsboard_wrapper">
+            <div class="newsboard">
+                <span class="message_number">3</span>
+
+                <a href="#" class="close_button" title="Delete message"
+                    >&times;</a
+                >
+
+                <div class="newsboard_content"></div>
+
+                <div class="paging_bar">
+                    <span class="float_left">
+                        <a href="#" title="first">«</a>
+                        <a href="http://example.com" title="prev">‹</a>
+                    </span>
+
+                    <span class="float_right">
+                        <a href="http://example.com" title="next">›</a>
+                        <a href="#" title="last">»</a>
+                    </span>
+
+                    <span class="progressbar">
+                        <progress
+                            max="3"
+                            value="1"
+                            id="messages_progress"
+                        ></progress>
+                    </span>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Chat members</h2>
-        <ul id="chat_members">
-            <li class="admin">Heribert</li>
-            <li>Friedlinde</li>
-            <li>Tusnelda</li>
-            <li>Berthold</li>
-            <li>Oswine</li>
-            <li>Ladislaus</li>
-        </ul>
-    </section>
+    <div class="container">
+        <p><input type="text" id="display" /></p>
+        <div id="keyfield">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
 
-
+    </div>
 </body>
 </html>
