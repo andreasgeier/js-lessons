@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            vertical-align: top;
+            padding: 4px 8px;
+            border: 1px solid black;
+        }
+        th:nth-child(2), td:nth-child(2) {
+            text-align: right;
+        }
+        th {
+            color: white;
+            background-color: black;
+        }
+        input, button {
+            padding: 4px 8px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+        input::placeholder {
+            font-style: italic;
+        }
+        button {
+            min-width: 60px;
+            margin: 0 6px;
+            background-color: rgb(233, 236, 239);
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    <table id="products">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price in €</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Darth Vader Action Figure</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Darth Vader Action Figure - Collectors Edition</td>
+                <td>39.99</td>
+            </tr>
+            <tr>
+                <td>Death Star</td>
+                <td>344.95</td>
+            </tr>
+            <tr>
+                <td>Imperial I-class Star Destroyer</td>
+                <td>199.99</td>
+            </tr>
+            <tr>
+                <td>Storm Trooper</td>
+                <td>7.99</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="new_product">
+        <input type="text" placeholder="Enter product name..." class="name"/>
+        € <input type="number" max="999" placeholder="Enter price..." class="price"/>
+        <button id="add_product">Add</button>
+    </p>
+
+    <script>
+        'use strict'
+
+        // Helper function: Find specific selector
+        const $ = q => document.querySelector(q)
+
+        // Helper function: Find all selectors
+        const $$ = q => Array.from(document.querySelectorAll(q))
+
+        // Helper function: Array helper function
+        const $on = (el, ev, fn) => {
+            Array.isArray(el)
+                ? el.forEach(ae => $on(ae, ev, fn))
+                : el.addEventListener(ev, fn)
+            return el
+        }
+
+        // -------------------------------------------------------------------
+        // Lesson starting at chapter 10
+
+        // Init function
+        const init = () => {
+            $on($('#add_product'), 'click', addProduct)
+        }
+
+        // Add new product row with data from inputs
+        const addProduct = () => {
+            $('#products > tbody').appendChild(
+                tr([
+                    td($('.name').value),
+                    td($('.price').value)
+                ])
+            )
+        } 
+
+        // Create tr
+        const tr = tds => {
+            const trNode = document.createElement('tr')
+            tds.forEach(td => trNode.appendChild(td))
+            return trNode
+        }
+
+        // Create td
+        const td = text => {
+            const tdNode = document.createElement('td')
+            tdNode.textContent = text
+            return tdNode
+        }
+
+        init()
+
+    </script>
+</body>
+</html>
