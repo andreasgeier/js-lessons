@@ -98,23 +98,31 @@
 
 ## 2-js-dom
 
-##### week 6
+##### week 6 - 7
 
 [Lesson 01](2-js-dom/day26-lesson01.html): querySelector() & querySelectorAll
 
 ## 3-node-js
 
+##### week 7
+
 Coming soon...
 
 ## 4-webanwendungen
+
+##### week 7 - 8
 
 Coming soon...
 
 ## 5-ttd
 
+##### week 9 - 10
+
 Coming soon...
 
 ## 6-react
+
+##### week 10 - 11
 
 Coming soon...
 
@@ -144,10 +152,11 @@ Coming soon...
 --- [Day 23](notes/day23.html): Objects, JSON
 --- [Day 24](notes/day24.html): Objects, CSV, Destructering
 
-##### js-dom, week 6
+##### js-dom, week 6 - 7
 
 [Day 26](notes/day26.html): DOM
 --- [Day 30](notes/day30.html): Chat-Teilnehmer finden
+--- [Day 31](notes/day31.html): ...
 
 <br>
 
