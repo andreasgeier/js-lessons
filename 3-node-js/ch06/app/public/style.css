@@ -1,0 +1,21 @@
+html {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    padding: 0;
+}
+body {
+    min-height: 100dvh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #eee;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+}
+a {
+    color: blue;
+}
+h1 span {
+    color: #aaa;
+    font-weight: 200;
+}

@@ -1,0 +1,17 @@
+body {
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    margin: 0;
+}
+h1 {
+    color: #aa6600;
+    margin: 1rem;
+}
+p {
+    margin: 1rem;
+    line-height: 1.5;
+}
+nav {
+    background-color: darkgrey;
+    padding: 1rem;
+}
